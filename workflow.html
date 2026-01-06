@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/css">
+      /* This ensures every single element uses the font */
+      * {
+        font-family: "Inter", sans-serif !important;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    </style>
+
+    <style type="text/theme">
+      @theme {
+        /* Sets Inter as the default sans font for Tailwind classes like font-sans */
+        --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- WoekFlow Page  -->
+
+    <div class="h-screen bg-[#F1F1F1]">
+
+        <!-- Header Section -->
+      <section class="px-[16px]">
+        <div class="pt-[16px] px-[0px] pb-[12px]">
+          <div class="flex justify-between">
+            <div class="flex items-center">
+              <div
+                class="flex items-center justify-center p-1 rounded-md bg-gray-100"
+              >
+                <span class="text-[#303030]">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 16 16"
+                    class="w-4 h-4 fill-current"
+                  >
+                    <path
+                      d="M12 14h-2a1 1 0 0 1-1-1v-2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v2.5a1 1 0 0 1-1 1h-2a2 2 0 0 1-2-2v-4.257c0-.796.316-1.56.879-2.122l3.707-3.707c.78-.78 2.047-.78 2.828 0l3.707 3.707a3 3 0 0 1 .879 2.122v4.257a2 2 0 0 1-2 2"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div id="page-title">
+                <h1
+                  class="text-[18px] font-semibold text-[#30303] tracking-tight leading-[1]"
+                  tabindex="-1"
+                >
+                  Workflows
+                </h1>
+              </div>
+            </div>
+            <div class="flex gap-1">
+              <button
+                class="py-1 px-3 bg-[#E3E3E3] rounded-[8px] text-[12px] font-[550] text-[#303030] hover:bg-[#cccc] cursor-pointer"
+              >
+                Browse templates
+              </button>
+             
+              <button
+                class="py-1 px-3 bg-[#E3E3E3] rounded-[8px] text-[12px] font-[550] text-[#303030] hover:bg-[#cccc] cursor-pointer"
+              >
+              <a href="D:\ORK\Shopify-JS\Product.html">  Products</a>
+               
+              </button>
+
+              <button
+                class="rounded-[8px] bg-[#303030] text-white px-3 py-1 text-[0.75rem] font-semibold font-sans cursor-pointer shadow-[0_-0.0625rem_0_0.0625rem_rgba(0,0,0,0.8)_inset,0_0_0_0.0625rem_rgba(48,48,48,1)_inset,0_0.03125rem_0_0.09375rem_rgba(255,255,255,0.25)_inset] hover:bg-[#1a1a1a] active:translate-y-[0.0625rem] active:[&>*]:translate-y-[0.0625rem] inline-flex items-center justify-center"
+              >
+                Createworkflow
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main Section -->
+      <section class="px-[16px]">
+
+        <div class="bg-[#FFFFFF] py-16 rounded-3xl border border-gray-200">
+
+          <div
+            class="flex flex-col items-center max-w-[400px] mx-auto text-center space-y-[6px]"
+          >
+          <!-- Image Section -->
+            <img
+              src="https://cdn.shopify.com/shopifycloud/flow_app/assets/emptystate-CUz6fFX6.png"
+              alt="Image"
+              class="object-contain max-w-[189px] h-[148px]"
+            />
+
+            <!-- Content Section -->
+            <div class="space-y-[6px]">
+              <h2 class="text-[14px] font-semibold text-[#303030]">
+                Get more work done in less time
+              </h2>
+              <p class="text-[12px] font-[450] text-[#303030]">
+                Turn your tasks into automated workflows so you can get back to
+                business.
+              </p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-3 mt-4">
+              <button
+                class="rounded-[8px] bg-[#FFFFFF] text-black px-3 py-1 text-[0.75rem] font-semibold font-sans cursor-pointer shadow-[inset_0_0_0_.5px_#D3D3D3,inset_0_-.5px_0_.5px_#B5B5B5] active:translate-y-[0.0625rem] inline-flex items-center justify-center"
+              >
+                Browse templates
+              </button>
+              <button
+                class="rounded-[8px] bg-[#303030] text-white px-3 py-1 text-[0.75rem] font-semibold font-sans cursor-pointer shadow-[0_-0.0625rem_0_0.0625rem_rgba(0,0,0,0.8)_inset,0_0_0_0.0625rem_rgba(48,48,48,1)_inset,0_0.03125rem_0_0.09375rem_rgba(255,255,255,0.25)_inset] hover:bg-[#1a1a1a] active:translate-y-[0.0625rem] active:[&>*]:translate-y-[0.0625rem] inline-flex items-center justify-center"
+              >
+                Createworkflow
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white divide-y divide-gray-300">
+
+
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
+
+
+
+

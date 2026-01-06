@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/css">
+      /* This ensures every single element uses the font */
+      * {
+        font-family: "Inter", sans-serif !important;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    </style>
+
+    <style type="text/theme">
+      @theme {
+        /* Sets Inter as the default sans font for Tailwind classes like font-sans */
+        --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+      }
+    </style>
+  </head>
+<body>
+     
+    <div class="flex overflow-hidden h-screen">
+
+        <!-- SideBar -->
+
+         <section>
+      <div class=" h-[100%] bg-[#EBEBEB] p-[10px] ">
+        <div class="flex mt-10 flex-col gap-4 list-none items-center justify-center">
+          <li class="relative group w-fit">
+            <p
+              class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 
+                  px-2 py-1 bg-[#303030] text-white text-[12px] rounded-md
+                  opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none
+                  whitespace-nowrap shadow-md"
+            >
+              Home
+              <span class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-[#303030]"></span>
+            </p>
+            <a href="#">
+              <span class="w-5 h-5" aria-hidden="true">
+                <svg
+                  class="w-5 h-5 text-[#4A4A4A]"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M12 14h-2a1 1 0 0 1-1-1v-2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v2.5a1 1 0 0 1-1 1h-2a2 2 0 0 1-2-2v-4.257c0-.796.316-1.56.879-2.122l3.707-3.707c.78-.78 2.047-.78 2.828 0l3.707 3.707a3 3 0 0 1 .879 2.122v4.257a2 2 0 0 1-2 2"></path>
+                </svg>
+              </span>
+            </a>
+          </li>
+
+          <li class="relative group w-fit">
+            <p
+              class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 
+                  px-2 py-1 bg-[#303030] text-white text-[12px] rounded-md
+                  opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none
+                  whitespace-nowrap shadow-md"
+            >
+              Home
+              <span class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-[#303030]"></span>
+            </p>
+            <a href="#">
+              <span class="w-5 h-5  text-[#4A4A4A]">
+                <svg
+                  class="w-5 h-5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M2.255 3.847a2.75 2.75 0 0 1 2.72-2.347h6.05a2.75 2.75 0 0 1 2.72 2.347l.66 4.46q.095.638.095 1.282v1.661a3.25 3.25 0 0 1-3.25 3.25h-6.5a3.25 3.25 0 0 1-3.25-3.25v-1.66q0-.645.094-1.283zm2.72-.847a1.25 1.25 0 0 0-1.236 1.067l-.583 3.933h2.484c.538 0 1.015.344 1.185.855l.159.474a.25.25 0 0 0 .237.171h1.558a.25.25 0 0 0 .237-.17l.159-.475a1.25 1.25 0 0 1 1.185-.855h2.484l-.583-3.933a1.25 1.25 0 0 0-1.236-1.067z"
+                  ></path>
+                </svg>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span aria-hidden="true" class="w-5 h-5 ">
+                <svg
+                  fill="currentColor"
+                  class="w-5 h-5  text-[#4A4A4A]"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M11 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                  <path
+                    fill-rule="evenodd"
+                    d="M9.276 1.5c-1.02 0-1.994.415-2.701 1.149l-4.254 4.417a2.75 2.75 0 0 0 .036 3.852l2.898 2.898a2.5 2.5 0 0 0 3.502.033l4.747-4.571a3.25 3.25 0 0 0 .996-2.341v-2.187a3.25 3.25 0 0 0-3.25-3.25zm-1.62 2.19a2.24 2.24 0 0 1 1.62-.69h1.974c.966 0 1.75.784 1.75 1.75v2.187c0 .475-.194.93-.536 1.26l-4.747 4.572a1 1 0 0 1-1.401-.014l-2.898-2.898a1.25 1.25 0 0 1-.016-1.75l4.253-4.418Z"
+                  ></path>
+                </svg>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span aria-hidden="true" class="w-5 h-5 ">
+                <svg
+                  class="w-5 h-5  text-[#4A4A4A]"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M4.5 4.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                  <path d="M2.516 12.227a6.273 6.273 0 0 1 10.968 0l.437.786a1.338 1.338 0 0 1-1.17 1.987h-9.502a1.338 1.338 0 0 1-1.17-1.987z"></path>
+                </svg>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span aria-hidden="true" class="w-5 h-5">
+                <svg
+                  class="w-5 h-5  text-[#4A4A4A]"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M3 8a5 5 0 0 1 10 0 1 1 0 0 0 2 0 7 7 0 1 0-7 7 1 1 0 0 0 0-2 5 5 0 0 1-5-5"></path>
+                  <path d="M9.29 7.84a1 1 0 1 0 1.98-.279 3.25 3.25 0 0 0-2.16-2.62 3.25 3.25 0 1 0-1.622 6.274 1 1 0 0 0 .347-1.97 1.25 1.25 0 0 1-.978-.865 1.24 1.24 0 0 1 .327-1.265 1.25 1.25 0 0 1 1.275-.283 1.26 1.26 0 0 1 .831 1.008"></path>
+                  <path d="M9.611 8.973a.5.5 0 0 0-.638.638l2.121 6.01a.502.502 0 0 0 .871.134l1.172-1.557 1.038 1.037a.5.5 0 0 0 .707 0l.353-.353a.5.5 0 0 0 0-.707l-1.037-1.038 1.557-1.172a.502.502 0 0 0-.134-.871z"></path>
+                </svg>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span aria-hidden="true" class="w-5 h-5 ">
+                <svg
+                  class="w-5 h-5  text-[#4A4A4A]"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M9.527 1.327c-.6-1.306-2.455-1.306-3.054 0a1.68 1.68 0 0 1-2.112.874c-1.347-.5-2.66.813-2.16 2.16a1.68 1.68 0 0 1-.874 2.112c-1.306.6-1.306 2.455 0 3.054a1.68 1.68 0 0 1 .874 2.112c-.5 1.347.813 2.659 2.16 2.16a1.68 1.68 0 0 1 2.112.874c.6 1.306 2.455 1.306 3.054 0a1.68 1.68 0 0 1 2.112-.874c1.347.499 2.66-.813 2.16-2.16a1.68 1.68 0 0 1 .874-2.112c1.306-.6 1.306-2.455 0-3.054a1.68 1.68 0 0 1-.874-2.112c.5-1.347-.813-2.66-2.16-2.16a1.68 1.68 0 0 1-2.112-.874m-2.527 4.923a1 1 0 1 1-2 0 1 1 0 0 1 2 0m3.53.53-4 4a.749.749 0 1 1-1.06-1.06l4-4a.749.749 0 1 1 1.06 1.06m.47 3.47a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                  ></path>
+                </svg>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span aria-hidden="true" class="w-5 h-5 ">
+                <svg
+                  class="w-5 h-5  text-[#4A4A4A]"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M10 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.42 1.5h5.16c.535 0 .98 0 1.345.03.38.03.736.098 1.073.27.518.263.939.684 1.202 1.202.172.337.24.693.27 1.073.03.365.03.81.03 1.345v1.91c0 .535 0 .98-.03 1.345-.03.38-.098.736-.27 1.073a2.74 2.74 0 0 1-1.201 1.202c-.338.172-.694.24-1.074.27a6 6 0 0 1-.288.017.7.7 0 0 1-.137.013h-6.08c-.535 0-.98 0-1.345-.03-.38-.03-.736-.098-1.073-.27a2.75 2.75 0 0 1-1.047-.934.75.75 0 0 1-.176-.31c-.157-.324-.22-.667-.25-1.031-.029-.365-.029-.81-.029-1.345v-1.91c0-.535 0-.98.03-1.345.03-.38.098-.736.27-1.073a2.74 2.74 0 0 1 1.202-1.202c.337-.172.693-.24 1.073-.27.365-.03.81-.03 1.345-.03m7.58 5.8-.001.533-.135-.192a1.75 1.75 0 0 0-2.778-.116l-1.086 1.303-2.411-2.893a1.75 1.75 0 0 0-2.68-.01l-.909 1.073v-1.548c0-.572 0-.957.025-1.253.023-.287.065-.424.111-.514.12-.236.311-.427.547-.547.09-.046.227-.088.514-.111.296-.024.68-.025 1.253-.025h5.1c.572 0 .957 0 1.252.025.288.023.425.065.516.111.235.12.426.311.546.547.046.09.088.227.111.514.024.296.025.68.025 1.253z"
+                  ></path>
+                  <path d="M2 13.75a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 0 1.5h-5.5a.75.75 0 0 1-.75-.75"></path>
+                  <path d="M10.75 13a.75.75 0 0 0 0 1.5h2.5a.75.75 0 0 0 0-1.5z"></path>
+                </svg>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span aria-hidden="true" class="w-5 h-5 ">
+                <svg
+                  class="w-5 h-5  text-[#4A4A4A]"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M1 8a7 7 0 0 1 12.584-4.222 2 2 0 0 0-2.327 1.806 3.5 3.5 0 0 0-1.862 2.166h-1.395a1.255 1.255 0 0 1-.764-2.248l.462-.357a.89.89 0 0 0 .347-.707v-.04c0-.747.606-1.353 1.353-1.353h.057c.193 0 .37-.069.509-.184a5.5 5.5 0 0 0-6.945 2.804l1.89 1.89c.378.379.591.892.591 1.427v.518a1 1 0 0 0 1 1 1.5 1.5 0 0 1 1.5 1.5v1.5q.647-.002 1.253-.143c.029.546.277 1.035.658 1.379a7 7 0 0 1-8.911-6.736"></path>
+                  <path d="M13.25 5a.75.75 0 0 1 .75.75v.75h.75a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 0 0 1.5h.5a2.25 2.25 0 0 1 .25 4.486v.264a.75.75 0 0 1-1.5 0v-.25h-.75a.75.75 0 0 1 0-1.5h2a.75.75 0 0 0 0-1.5h-.5a2.25 2.25 0 0 1-.25-4.486v-.764a.75.75 0 0 1 .75-.75"></path>
+                </svg>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span aria-hidden="true" class="w-5 h-5 ">
+                <svg
+                  class="w-5 h-5  text-[#4A4A4A]"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M7.971 2c-.204 0-.344 0-.465.024a1.25 1.25 0 0 0-.982.982c-.024.121-.024.26-.024.465v9.058c0 .204 0 .344.024.465.099.496.486.883.982.982.121.024.26.024.465.024h.058c.204 0 .344 0 .465-.024a1.25 1.25 0 0 0 .982-.982c.024-.121.024-.26.024-.465v-9.058c0-.204 0-.344-.024-.465a1.25 1.25 0 0 0-.982-.982c-.121-.024-.26-.024-.465-.024z"></path>
+                  <path d="M3.471 7.5c-.204 0-.344 0-.465.024a1.25 1.25 0 0 0-.982.982c-.024.121-.024.26-.024.465v3.558c0 .204 0 .344.024.465.099.496.486.883.982.982.121.024.26.024.465.024h.058c.204 0 .344 0 .465-.024a1.25 1.25 0 0 0 .982-.982c.024-.121.024-.26.024-.465v-3.558c0-.204 0-.344-.024-.465a1.25 1.25 0 0 0-.982-.982c-.121-.024-.26-.024-.465-.024z"></path>
+                  <path d="M12.471 4.5c-.204 0-.344 0-.465.024a1.25 1.25 0 0 0-.982.982c-.024.121-.024.26-.024.465v6.558c0 .204 0 .344.024.465.099.496.486.883.982.982.121.024.26.024.465.024h.058c.204 0 .344 0 .465-.024a1.25 1.25 0 0 0 .982-.982c.024-.121.024-.26.024-.465v-6.558c0-.204 0-.344-.024-.465a1.25 1.25 0 0 0-.982-.982c-.121-.024-.26-.024-.465-.024z"></path>
+                </svg>
+              </span>
+            </a>
+          </li>
+        </div>
+      </div>
+    </section>
+
+
+  
+    <!-- MAIN SECTION -->
+
+    <div class="flex-1 h-screen bg-[#F1F1F1] overflow-y-auto">
+
+
+  <div>
+
+    <!-- MAIN SECTION PRODUCT HEADER -->
+  <section class="px-[16px]">
+    <div class="pt-[16px] px-[0px] pb-[12px]">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-0">
+          <span class="inline-flex items-center justify-center w-6 h-6 text-[#1a1a1a]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="w-4 h-4 fill-current">
+              <path d="M11 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+              <path fill-rule="evenodd" d="M9.276 1.5c-1.02 0-1.994.415-2.701 1.149l-4.254 4.417a2.75 2.75 0 0 0 .036 3.852l2.898 2.898a2.5 2.5 0 0 0 3.502.033l4.747-4.571a3.25 3.25 0 0 0 .996-2.341v-2.187a3.25 3.25 0 0 0-3.25-3.25zm-1.62 2.19a2.24 2.24 0 0 1 1.62-.69h1.974c.966 0 1.75.784 1.75 1.75v2.187c0 .475-.194.93-.536 1.26l-4.747 4.572a1 1 0 0 1-1.401-.014l-2.898-2.898a1.25 1.25 0 0 1-.016-1.75l4.253-4.418Z" />
+            </svg>
+          </span>
+          <h1 class="text-[1.125rem] font-semibold text-gray-900">
+            <a href="#">Products</a>
+          </h1>
+        </div>
+      
+        <!-- HEADER BUTTONS -->
+        <div class="flex gap-1">
+          <button class="py-1 px-3 bg-[#E3E3E3] rounded-[8px] text-[12px] font-[550] text-[#303030] hover:bg-[#cccc] cursor-pointer">
+            Export
+          </button>
+          <button class="py-1 px-3 bg-[#E3E3E3] rounded-[8px] text-[12px] font-[550] text-[#303030] hover:bg-[#cccc] cursor-pointer">
+            Import
+          </button>
+          <button class="py-1 px-3 bg-[#E3E3E3] rounded-[8px] text-[12px] font-[550] text-[#303030] hover:bg-[#cccc] cursor-pointer">
+            More Actions
+          </button>
+          <button class="rounded-[8px] bg-[#303030] text-white px-3 py-1 text-[0.75rem] font-semibold font-sans cursor-pointer shadow-[0_-0.0625rem_0_0.0625rem_rgba(0,0,0,0.8)_inset,0_0_0_0.0625rem_rgba(48,48,48,1)_inset,0_0.03125rem_0_0.09375rem_rgba(255,255,255,0.25)_inset] hover:bg-[#1a1a1a] active:translate-y-[0.0625rem] inline-flex items-center justify-center">
+            Add product
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Second Header -->
+  <section class="px-[16px]">
+    <div class="flex items-center bg-white rounded-[12px] border border-[#E3E3E3] h-[70px]">
+      <div class="py-1 px-1.5">
+        <div class="flex items-center p-4 rounded-[8px] gap-2 hover:bg-[#f1f1f1] cursor-pointer">
+          <span class="inline-flex items-center text-[#303030]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="w-4 h-4 fill-current">
+              <path fill-rule="evenodd" d="M5.75 1.5a.75.75 0 0 0-1.5 0v.407a3 3 0 0 0-.702.252c-.706.36-1.28.933-1.64 1.639-.226.444-.32.924-.365 1.47-.043.531-.043 1.187-.043 2v1.464c0 .813 0 1.469.043 2 .045.546.14 1.026.366 1.47.36.706.933 1.28 1.639 1.64.444.226.924.32 1.47.365.531.043 1.187.043 2 .043h3.383c.323 0 .542 0 .735-.02a3.75 3.75 0 0 0 3.344-3.344c.02-.193.02-.412.02-.735v-2.883c0-.813 0-1.469-.043-2-.045-.546-.14-1.026-.366-1.47a3.76 3.76 0 0 0-1.638-1.64 3 3 0 0 0-.703-.251v-.407a.75.75 0 0 0-1.5 0v.259c-.373-.009-.794-.009-1.268-.009h-1.964c-.474 0-.895 0-1.268.009zm-1.521 1.995c.197-.1.458-.17.912-.207.462-.037 1.057-.038 1.909-.038h1.9c.852 0 1.447 0 1.91.038.453.037.714.107.912.207.423.216.767.56.983.984.1.197.17.458.207.912.014.18.024.38.029.609h-9.982q.008-.34.03-.61c.036-.453.106-.714.206-.911a2.25 2.25 0 0 1 .984-.984m-1.229 4.005v1.2c0 .852 0 1.447.038 1.91.037.453.107.714.207.912.216.423.56.767.984.983.197.1.458.17.912.207.462.037 1.057.038 1.909.038h3.306c.385 0 .52-.001.626-.012a2.25 2.25 0 0 0 2.006-2.006c.011-.106.012-.241.012-.626v-2.606z" />
+            </svg>
+          </span>
+          <span class="text-[12px] text-[#303030] font-medium">30 days</span>
+        </div>
+      </div>
+
+      <hr class="w-px h-[70px] bg-gray-300 border-0" />
+
+      <div class="py-1 px-1.5">
+        <div class="flex flex-col justify-center px-3 py-1 rounded-[8px] hover:bg-[#f7f7f7]">
+          <a href="#" class="flex flex-col gap-1">
+            <h1 class="text-[0.8125rem] font-semibold text-[#303030] underline decoration-dotted decoration-[#cccc] decoration-2 underline-offset-4 leading-[1.5]">
+              Average sell-through rate
+            </h1>
+            <p class="text-[0.8125rem] font-semibold text-[#303030] flex items-center gap-2">
+              0%
+              <svg viewBox="0 0 11 16" height="16" width="11">
+                <path d="M0.519531 1.79395H12.0039V0.249023H0.519531V1.79395Z" fill="#8a8a8a" transform="translate(0, 7)" />
+              </svg>
+            </p>
+          </a>
+        </div>
+      </div>
+
+      <hr class="w-px h-[70px] bg-gray-300 border-0" />
+
+      <div class="py-1 px-1.5">
+        <div class="flex flex-col justify-center px-3 py-1 rounded-[8px] hover:bg-[#f7f7f7]">
+          <a href="#" class="flex flex-col gap-1">
+            <h1 class="text-[0.8125rem] font-semibold text-[#303030] underline decoration-dotted decoration-[#cccc] decoration-2 underline-offset-4 leading-[1.5]">
+              Products by days of inventory remaining
+            </h1>
+            <p class="text-[0.8125rem] font-medium leading-[1.5] text-[#616161]">No data</p>
+          </a>
+        </div>
+      </div>
+
+      <hr class="w-px h-[70px] bg-gray-300 border-0" />
+
+      <div class="py-1 px-1.5 flex-1">
+        <div class="flex flex-col justify-center px-3 py-1 rounded-[8px] hover:bg-[#f7f7f7] w-full">
+          <a href="#" class="flex flex-col gap-1 w-full">
+            <h1 class="text-[0.8125rem] font-semibold text-[#303030] underline decoration-dotted decoration-[#cccc] decoration-2 underline-offset-4 leading-[1.5]">
+              ABC products analysis
+            </h1>
+            <p class="text-[0.8125rem] font-medium leading-[1.5]">RS 0
+              <span class="text-[0.8125rem] font-normal">C</span>
+            </p>
+            <hr class="h-[2px] w-[40px] bg-[#13acf0] border-0" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+
+<!-- Table Header -->
+
+
+    <section class="px-[16px] mt-4">
+
+         <div class="w-full bg-white border border-[#E3E3E3] rounded-[12px] overflow-hidden">
+             <div class="flex items-center justify-between p-2 border-b border-gray-200">
+      <!-- LEFT: Tabs -->
+      
+          <div class="flex items-center gap-1">
+            <button class="px-3 py-1 text-[12px] cursor-pointer font-[550] rounded-[10px] bg-[#e0e0e0]">
+                All
+            </button>
+            <button class="px-3 py-1 text-[12px] cursor-pointer font-[550] rounded-[10px] text-[#4a4a4a] hover:bg-[#f1f1f1]">
+                Active
+            </button>
+            <button class="px-3 py-1 text-[12px] cursor-pointer font-[550] rounded-[10px] text-[#4a4a4a] hover:bg-[#f1f1f1]">
+                Draft
+            </button>
+            <button class="px-3 py-1 text-[12px] cursor-pointer font-[550] rounded-[10px] text-[#4a4a4a] hover:bg-[#f1f1f1]">
+                Archived
+            </button>
+
+            <!-- Create new view button -->
+            <button
+              type="button"
+              aria-label="Create new view"
+              class="
+            inline-flex items-center justify-center
+            w-7 h-7
+            rounded-[10px]
+            text-[#303030]
+            hover:bg-[#f1f1f1]
+            active:bg-[#e5e5e5]
+            cursor-pointer
+          "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                class="w-4 h-4"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5z" />
+              </svg>
+            </button>
+          </div>
+        
+
+      <!-- RIGHT: Action Buttons -->
+      <div class="flex items-center space-x-2">
+        <div class="flex items-center space-x-2">
+          <!-- Search + Filter Button -->
+           <button type="button" aria-label="Search and filter products" class="
+            flex rounded-[8px] bg-[#FFFFFF] text-[#303030] px-2 py-1.5 text-[0.75rem] font-semibold font-sans cursor-pointer inline-flex items-center justify-center  shadow-[inset_0_0_0_.5px_#D3D3D3,inset_0_-.5px_0_.5px_#B5B5B5]
+    active:translate-y-[0.0625rem]">
+    <svg class="w-4 h-4 mr-1 text-[#4a4a4a]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+        <path fill-rule="evenodd" d="M10.323 11.383a5.5 5.5 0 1 1-3.323-9.883 5.5 5.5 0 0 1 4.383 8.823l2.897 2.897a.749.749 0 1 1-1.06 1.06zm.677-4.383c0 2.21-1.79 4-4 4s-4-1.79-4-4 1.79-4 4-4 4 1.79 4 4">
+
+        </path>
+    </svg>
+    
+    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+        <path d="M1 4a.75.75 0 0 1 .75-.75h12.5a.75.75 0 0 1 0 1.5h-12.5a.75.75 0 0 1-.75-.75">
+
+        </path>
+        <path d="M4.75 12a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 0 1.5h-5a.75.75 0 0 1-.75-.75">
+
+        </path>
+        <path d="M3.5 7.25a.75.75 0 0 0 0 1.5h9a.75.75 0 0 0 0-1.5z">
+
+        </path>
+    </svg>
+    </button>
+          
+          <!-- Sort Button -->
+          <div class="relative ">
+            <button
+              type="button"
+              aria-label="Sort the results"
+              class="flex rounded-[8px] bg-[#FFFFFF] text-[#484848] p-[6px] text-[0.75rem] font-semibold font-sans cursor-pointer inline-flex items-center justify-center   shadow-[inset_0_0_0_.5px_#D3D3D3,inset_0_-.5px_0_.5px_#B5B5B5]
+    active:translate-y-[0.0625rem]"
+            >
+              <!-- Sort Icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                class="w-4 h-4 text-[#4a4a4a]"
+                fill="currentColor"
+              >
+                <path d="M5.75 4.06v7.69a.75.75 0 0 1-1.5 0v-7.69l-1.72 1.72a.749.749 0 1 1-1.06-1.06l3-3a.75.75 0 0 1 1.06 0l3 3a.749.749 0 1 1-1.06 1.06z" />
+                <path d="M11.75 4.25a.75.75 0 0 0-1.5 0v7.69l-1.72-1.72a.749.749 0 1 0-1.06 1.06l3 3a.75.75 0 0 0 1.06 0l3-3a.749.749 0 1 0-1.06-1.06l-1.72 1.72z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        
+      </div>
+    </div>
+   
+
+
+    <!-- Table -->
+
+       <div class="overflow-x-auto">
+  <div class="min-w-max"> 
+    
+    <!-- Header Row -->
+    <div class="bg-[#f6f6f7] border-b border-gray-300 flex items-center min-w-max">
+
+      <!-- Sticky Checkbox -->
+      <div class="sticky left-0 z-20 min-w-[36px] bg-[#f6f6f7] p-[6px_6px_6px_12px] flex items-center">
+        <input type="checkbox" class="h-4 w-4 accent-black block" />
+      </div>
+
+      <!-- Sticky Image Spacer -->
+      <div class="sticky left-[36px] z-20 min-w-[52px] bg-[#f6f6f7] p-[6px] flex items-center justify-center">
+        <span class="sr-only">Image</span>
+      </div>
+
+      <!-- Product Column -->
+      <div class="min-w-[200px] p-[6px] flex items-center">
+        <span class="font-[550] text-[12px] text-[#616161]">Product</span>
+      </div>
+
+      <!-- Status Column -->
+      <div class="min-w-[110px] p-[6px] flex items-center">
+        <span class="font-[550] text-[12px] text-[#616161]">Status</span>
+      </div>
+
+      <!-- Inventory Column -->
+      <div class="min-w-[200px] p-[6px] flex items-center">
+        <span class="font-[550] text-[12px] text-[#616161]">Inventory</span>
+      </div>
+
+      <!-- Category Column -->
+      <div class="min-w-[110px] flex-1 p-[6px] flex items-center">
+        <span class="font-[550] text-[12px] text-[#616161]">Category</span>
+      </div>
+
+      <!-- Channels Column -->
+      <div class="min-w-[129px] p-[6px] flex items-center justify-center">
+        <span class="font-[550] text-[12px] text-[#616161]">Channels</span>
+      </div>
+
+      <!-- Catalogs Column -->
+      <div class="min-w-[129px] p-[6px] flex items-center justify-center">
+        <span class="font-[550] text-[12px] text-[#616161]">Catalogs</span>
+      </div>
+
+      <!-- Sticky Actions Spacer -->
+      <div class="sticky right-0 z-20 w-[44px] min-w-[44px] bg-[#f6f6f7] p-[6px] flex items-center ml-auto">
+        <span class="sr-only">Actions</span>
+      </div>
+    </div>
+
+    <!-- Product Card -->
+    <div class="group hover:bg-[#f7f7f7] cursor-pointer flex items-stretch bg-white border-b border-gray-300 relative min-w-max">
+
+      <!-- Sticky Checkbox -->
+      <div class="sticky left-0 z-20 w-[36px] min-w-[36px] bg-white group-hover:bg-[#f7f7f7] p-[6px_6px_6px_12px] flex items-center">
+        <input type="checkbox" class="h-4 w-4 accent-black" />
+      </div>
+
+      <!-- Sticky Image -->
+      <div class="sticky left-[36px] z-20 w-[52px] min-w-[52px] bg-white group-hover:bg-[#f7f7f7] p-[6px] flex items-center justify-center">
+        <div class="w-[40px] h-[40px] rounded-[6px] border border-[#D3D3D3] bg-white overflow-hidden">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0731/4689/2519/files/Main_52f8e304-92d9-4a36-82af-50df8fe31c69_40x40@3x.jpg?v=1742263839"
+            alt=""
+            class="w-full h-full object-contain"
+          />
+        </div>
+      </div>
+
+      <!-- Product Name -->
+      <div class="w-[200px] min-w-[200px] p-[6px] flex items-center">
+        <a href="#" class="text-[12px] font-medium text-[#303030] hover:underline leading-[16px]">
+          3" Airlift High-Waist Polka Dot Short - Black/white 3" Airlift High-Waist Polka Dot Short - Black/white
+        </a>
+      </div>
+
+      <!-- Status -->
+      <div class="w-[110px] min-w-[110px] p-[6px] flex items-center" >
+        <span class="inline-flex items-center text-[12px] font-[550] rounded-[10px] py-[2px] px-[8px] text-[#014b40] bg-[#affebf]">
+          Active
+        </span>
+      </div>
+
+      <!-- Inventory -->
+      <div class="w-[191px] min-w-[191px] p-[6px] flex items-center text-[12px] font-[500] text-[#303030]">
+        Inventory
+      </div>
+
+      <!-- Category -->
+      <div class="w-[110px] flex-1 min-w-[110px] p-[6px] flex items-center text-[12px] text-[#303030]"></div>
+
+      <!-- Channels -->
+      <div class="w-[129px] min-w-[129px] p-[6px] flex items-center justify-center text-[12px] text-[#303030] hover:bg-[#EAEAEA] cursor-pointer">
+        <span class="text-[12px] text-gray-800">1</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="w-4 h-4 text-gray-600 transition-all" fill="currentColor">
+          <path fillRule="evenodd" d="M4.24 6.2a.75.75 0 0 1 1.06.04l2.7 2.908 2.7-2.908a.75.75 0 0 1 1.1 1.02l-3.25 3.5a.75.75 0 0 1-1.1 0l-3.25-3.5a.75.75 0 0 1 .04-1.06"></path>
+        </svg>
+      </div>
+
+      <!-- Catalogs -->
+      <div class="w-[129px] min-w-[129px] p-[6px] flex items-center justify-center text-[12px] text-[#303030] hover:bg-[#EAEAEA] cursor-pointer">
+        1
+      </div>
+
+      <!-- Eye Icon -->
+      <div class="sticky right-0 z-20 w-[44px] min-w-[44px] bg-white group-hover:bg-[#f7f7f7] p-[6px] flex items-center justify-center">
+        <button type="button" aria-label="Preview on Online Store" class="flex items-center justify-center w-8 h-8 rounded-[10px] hover:bg-gray-200 opacity-0 group-hover:opacity-100 transition-opacity">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="w-4 h-4 text-[#606060]" fill="currentColor">
+            <path fillRule="evenodd" d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0m-1.5 0a1.5 1.5 0 1 1-3-.001 1.5 1.5 0 0 1 3 .001"></path>
+            <path fillRule="evenodd" d="M8 2c-2.476 0-4.348 1.23-5.577 2.532a9.3 9.3 0 0 0-1.4 1.922 6 6 0 0 0-.37.818c-.082.227-.153.488-.153.728s.071.501.152.728c.088.246.213.524.371.818.317.587.784 1.27 1.4 1.922 1.229 1.302 3.1 2.532 5.577 2.532s4.348-1.23 5.577-2.532a9.3 9.3 0 0 0 1.4-1.922c.158-.294.283-.572.37-.818.082-.227.153-.488.153-.728s-.071-.501-.152-.728a6 6 0 0 0-.371-.818 9.3 9.3 0 0 0-1.4-1.922c-1.229-1.302-3.1-2.532-5.577-2.532m-5.999 6.002v-.004c.004-.02.017-.09.064-.223.058-.161.15-.369.278-.608a7.8 7.8 0 0 1 1.17-1.605c1.042-1.104 2.545-2.062 4.487-2.062s3.445.958 4.486 2.062c.52.55.912 1.126 1.17 1.605.13.24.221.447.279.608.047.132.06.203.064.223v.004c-.004.02-.017.09-.064.223-.058.161-.15.369-.278.608a7.8 7.8 0 0 1-1.17 1.605c-1.042 1.104-2.545 2.062-4.487 2.062s-3.445-.958-4.486-2.062a7.7 7.7 0 0 1-1.17-1.605a4.5 4.5 0 0 1-.279-.608c-.047-.132-.06-.203-.064-.223"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+
+    </section>
+
+
+
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

@@ -193,6 +193,7 @@
 //   });
 // });
 
+
 const buttons  = document.querySelectorAll(".filter-btn")
 const cards =  document.querySelectorAll("[data-category]")
 
@@ -220,9 +221,6 @@ buttons.forEach((btn) =>{
 
 
 
-
-
-
 let inputContainer = document.querySelector(".input-container");
 let searchIcon = document.querySelector(".search-icon");
 let TABS = document.querySelector(".Tabs-container")
@@ -235,6 +233,8 @@ searchIcon.addEventListener("click", () => {
   
 });
 
+
+
 let cancelBtn = document.querySelector(".cancel-btn")
 
 cancelBtn.addEventListener ( "click" , () => {
@@ -243,6 +243,19 @@ cancelBtn.addEventListener ( "click" , () => {
   TABS.classList.remove("hidden"); 
 
 })
+
+
+
+let SortBtn = document.querySelector(".sort-btn")
+let SortMenu = document.querySelector(".Sort-Menu")
+
+SortBtn.addEventListener("click" , () =>{
+   SortMenu.classList.toggle("hidden")
+})
+
+
+
+
 
 function filterProducts(status) {
   // 1. Get all filter buttons to update their active styling

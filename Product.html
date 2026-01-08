@@ -457,10 +457,11 @@
           
           <!-- Sort Button -->
           <div class="relative ">
-            <button
+
+            <button 
               type="button"
               aria-label="Sort the results"
-              class="flex rounded-[8px] bg-[#FFFFFF] text-[#484848] p-[6px] text-[0.75rem] font-semibold font-sans cursor-pointer inline-flex items-center justify-center   shadow-[inset_0_0_0_.5px_#D3D3D3,inset_0_-.5px_0_.5px_#B5B5B5]
+              class=" sort-btn flex rounded-[8px] bg-[#FFFFFF] text-[#484848] p-[6px] text-[0.75rem] font-semibold font-sans cursor-pointer inline-flex items-center justify-center   shadow-[inset_0_0_0_.5px_#D3D3D3,inset_0_-.5px_0_.5px_#B5B5B5]
     active:translate-y-[0.0625rem]"
             >
               <!-- Sort Icon -->
@@ -474,6 +475,146 @@
                 <path d="M11.75 4.25a.75.75 0 0 0-1.5 0v7.69l-1.72-1.72a.749.749 0 1 0-1.06 1.06l3 3a.75.75 0 0 0 1.06 0l3-3a.749.749 0 1 0-1.06-1.06l-1.72 1.72z" />
               </svg>
             </button>
+
+
+     <!-- The Sort Menu  -->
+                
+                <div class="hidden Sort-Menu absolute top-full right-0 mt-1 px-[12px] py-[8px] min-w-[160px] bg-white border border-gray-200 rounded-xl shadow-xl z-[70] text-left">
+                  <!-- {/* Header */} -->
+                  <div class="">
+                    <span class="text-[13px] font-[450] text-[#303030]">
+                      Sort by
+                    </span>
+                  </div>
+
+                  <!-- {/* List of Options */} -->
+                  <div class="flex flex-col border-b border-gray-200 z-20 ">
+    
+                      <label
+                          for="title"
+                          class="flex items-center space-x-2  py-1 hover:bg-gray-100 rounded-lg cursor-pointer group"
+                        >
+                          <input
+                            type="radio"
+                            id="title"
+                            name="sortOptions"
+                            class="w-4 h-4 accent-black cursor-pointer"
+                          />
+                          <span class="text-[13px] font-[450] text-[#303030]">
+                            Product Title
+                          </span>
+                        </label>
+
+                        <label
+                          for="created"
+                          class="flex items-center space-x-2  py-1 hover:bg-gray-100 rounded-lg cursor-pointer group"
+                        >
+                          <input
+                            type="radio"
+                            id="created"
+                            name="sortOptions"
+                            class="w-4 h-4 accent-black cursor-pointer"
+                          />
+                          <span class="text-[13px] font-[450] text-[#303030]">
+                            Created
+                          </span>
+                        </label>
+
+
+                        <label
+                          for="updated"
+                          class="flex items-center space-x-2  py-1 hover:bg-gray-100 rounded-lg cursor-pointer group"
+                        >
+                          <input
+                            type="radio"
+                            id="updated"
+                            name="sortOptions"
+                            class="w-4 h-4 accent-black cursor-pointer"
+                          />
+                          <span class="text-[13px] font-[450] text-[#303030]">
+                            Updated
+                          </span>
+                        </label>
+
+
+                        <label
+                          for="inventory"
+                          class="flex items-center space-x-2  py-1 hover:bg-gray-100 rounded-lg cursor-pointer group"
+                        >
+                          <input
+                            type="radio"
+                            id="inventory"
+                            name="sortOptions"
+                            class="w-4 h-4 accent-black cursor-pointer"
+                          />
+                          <span class="text-[13px] font-[450] text-[#303030]">
+                            Inventory
+                          </span>
+                        </label>
+                    
+                  </div>
+
+                  <!-- {/* Button  one */} -->
+
+                  <div
+                    class="py-[8px] flex flex-col gap-1
+                  "
+                  >
+                    <button
+                      type="button"
+                      class="flex items-center gap-2 p-[6px] rounded-[10px] w-full text-left hover:bg-[#F2F2F2] cursor-pointer"
+                    >
+                      <!-- {/* The Up Arrow SVG */} -->
+                      <span class="text-gray-500">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 16 16"
+                          class="w-4 h-4"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M8 14.5a.75.75 0 0 1-.75-.75v-9.69l-2.72 2.72a.749.749 0 1 1-1.06-1.06l4-4a.747.747 0 0 1 1.06 0l4 4a.749.749 0 1 1-1.06 1.06l-2.72-2.72v9.69a.75.75 0 0 1-.75.75"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                      </span>
+
+                      <!-- {/* Button Text */} -->
+                      <span class="text-[12px] font-[550] text-[#000]">
+                        Oldest first
+                      </span>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="flex items-center gap-2 p-[6px] rounded-[10px] w-full text-left hover:bg-[#F2F2F2] cursor-pointer"
+                    >
+                      <!-- {/* The Up Arrow SVG */} -->
+                      <span class="flex items-center justify-center text-gray-500">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 16 16"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M8 1.5a.75.75 0 0 1 .75.75v9.69l2.72-2.72a.749.749 0 1 1 1.06 1.06l-4 4a.747.747 0 0 1-1.06 0l-4-4a.749.749 0 1 1 1.06-1.06l2.72 2.72v-9.69a.75.75 0 0 1 .75-.75"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                      </span>
+
+                      <!-- {/* Button Text */} -->
+                      <span class="text-[12px] font-[550] text-[#000]">
+                        Newest first
+                      </span>
+                    </button>
+                  </div>
+                </div> 
+
           </div>
         </div>
 
@@ -804,3 +945,4 @@
  
 
 
+            

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Products</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  
+    <style type="text/css">
+      /* This ensures every single element uses the font */
+      * {
+        font-family: "Inter", sans-serif !important;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        box-sizing: border-box;
+      }
+
+      
+    </style>
+
+    <style type="text/theme">
+      @theme {
+        /* Sets Inter as the default sans font for Tailwind classes like font-sans */
+        --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+      }
+    </style>
+  </head>
+<body>
+     
+    <div class="flex overflow-y-auto h-screen bg-[#F1F1F1]">
+
+        <!-- SideBar -->
+
+         <section>
+      <div class=" h-[100%] bg-[#EBEBEB] p-[10px] ">
+        <div class="flex mt-10 flex-col gap-4 list-none items-center justify-center">
+          <li class="relative group w-fit">
+            <p
+              class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 
+                  px-2 py-1 bg-[#303030] text-white text-[12px] rounded-md
+                  opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none
+                  whitespace-nowrap shadow-md"
+            >
+              Home
+              <span class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-[#303030]"></span>
+            </p>
+            <a href="#">
+              <span class="w-5 h-5" aria-hidden="true">
+                <svg
+                  class="w-5 h-5 text-[#4A4A4A]"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M12 14h-2a1 1 0 0 1-1-1v-2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v2.5a1 1 0 0 1-1 1h-2a2 2 0 0 1-2-2v-4.257c0-.796.316-1.56.879-2.122l3.707-3.707c.78-.78 2.047-.78 2.828 0l3.707 3.707a3 3 0 0 1 .879 2.122v4.257a2 2 0 0 1-2 2"></path>
+                </svg>
+              </span>
+            </a>
+          </li>
+
+          <li class="relative group w-fit">
+            <p
+              class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 
+                  px-2 py-1 bg-[#303030] text-white text-[12px] rounded-md
+                  opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none
+                  whitespace-nowrap shadow-md"
+            >
+              Home
+              <span class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-[#303030]"></span>
+            </p>
+            <a href="#">
+              <span class="w-5 h-5  text-[#4A4A4A]">
+                <svg
+                  class="w-5 h-5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M2.255 3.847a2.75 2.75 0 0 1 2.72-2.347h6.05a2.75 2.75 0 0 1 2.72 2.347l.66 4.46q.095.638.095 1.282v1.661a3.25 3.25 0 0 1-3.25 3.25h-6.5a3.25 3.25 0 0 1-3.25-3.25v-1.66q0-.645.094-1.283zm2.72-.847a1.25 1.25 0 0 0-1.236 1.067l-.583 3.933h2.484c.538 0 1.015.344 1.185.855l.159.474a.25.25 0 0 0 .237.171h1.558a.25.25 0 0 0 .237-.17l.159-.475a1.25 1.25 0 0 1 1.185-.855h2.484l-.583-3.933a1.25 1.25 0 0 0-1.236-1.067z"
+                  ></path>
+                </svg>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span aria-hidden="true" class="w-5 h-5 ">
+                <svg
+                  fill="currentColor"
+                  class="w-5 h-5  text-[#4A4A4A]"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M11 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                  <path
+                    fill-rule="evenodd"
+                    d="M9.276 1.5c-1.02 0-1.994.415-2.701 1.149l-4.254 4.417a2.75 2.75 0 0 0 .036 3.852l2.898 2.898a2.5 2.5 0 0 0 3.502.033l4.747-4.571a3.25 3.25 0 0 0 .996-2.341v-2.187a3.25 3.25 0 0 0-3.25-3.25zm-1.62 2.19a2.24 2.24 0 0 1 1.62-.69h1.974c.966 0 1.75.784 1.75 1.75v2.187c0 .475-.194.93-.536 1.26l-4.747 4.572a1 1 0 0 1-1.401-.014l-2.898-2.898a1.25 1.25 0 0 1-.016-1.75l4.253-4.418Z"
+                  ></path>
+                </svg>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span aria-hidden="true" class="w-5 h-5 ">
+                <svg
+                  class="w-5 h-5  text-[#4A4A4A]"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M4.5 4.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                  <path d="M2.516 12.227a6.273 6.273 0 0 1 10.968 0l.437.786a1.338 1.338 0 0 1-1.17 1.987h-9.502a1.338 1.338 0 0 1-1.17-1.987z"></path>
+                </svg>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span aria-hidden="true" class="w-5 h-5">
+                <svg
+                  class="w-5 h-5  text-[#4A4A4A]"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M3 8a5 5 0 0 1 10 0 1 1 0 0 0 2 0 7 7 0 1 0-7 7 1 1 0 0 0 0-2 5 5 0 0 1-5-5"></path>
+                  <path d="M9.29 7.84a1 1 0 1 0 1.98-.279 3.25 3.25 0 0 0-2.16-2.62 3.25 3.25 0 1 0-1.622 6.274 1 1 0 0 0 .347-1.97 1.25 1.25 0 0 1-.978-.865 1.24 1.24 0 0 1 .327-1.265 1.25 1.25 0 0 1 1.275-.283 1.26 1.26 0 0 1 .831 1.008"></path>
+                  <path d="M9.611 8.973a.5.5 0 0 0-.638.638l2.121 6.01a.502.502 0 0 0 .871.134l1.172-1.557 1.038 1.037a.5.5 0 0 0 .707 0l.353-.353a.5.5 0 0 0 0-.707l-1.037-1.038 1.557-1.172a.502.502 0 0 0-.134-.871z"></path>
+                </svg>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span aria-hidden="true" class="w-5 h-5 ">
+                <svg
+                  class="w-5 h-5  text-[#4A4A4A]"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M9.527 1.327c-.6-1.306-2.455-1.306-3.054 0a1.68 1.68 0 0 1-2.112.874c-1.347-.5-2.66.813-2.16 2.16a1.68 1.68 0 0 1-.874 2.112c-1.306.6-1.306 2.455 0 3.054a1.68 1.68 0 0 1 .874 2.112c-.5 1.347.813 2.659 2.16 2.16a1.68 1.68 0 0 1 2.112.874c.6 1.306 2.455 1.306 3.054 0a1.68 1.68 0 0 1 2.112-.874c1.347.499 2.66-.813 2.16-2.16a1.68 1.68 0 0 1 .874-2.112c1.306-.6 1.306-2.455 0-3.054a1.68 1.68 0 0 1-.874-2.112c.5-1.347-.813-2.66-2.16-2.16a1.68 1.68 0 0 1-2.112-.874m-2.527 4.923a1 1 0 1 1-2 0 1 1 0 0 1 2 0m3.53.53-4 4a.749.749 0 1 1-1.06-1.06l4-4a.749.749 0 1 1 1.06 1.06m.47 3.47a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                  ></path>
+                </svg>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span aria-hidden="true" class="w-5 h-5 ">
+                <svg
+                  class="w-5 h-5  text-[#4A4A4A]"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M10 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.42 1.5h5.16c.535 0 .98 0 1.345.03.38.03.736.098 1.073.27.518.263.939.684 1.202 1.202.172.337.24.693.27 1.073.03.365.03.81.03 1.345v1.91c0 .535 0 .98-.03 1.345-.03.38-.098.736-.27 1.073a2.74 2.74 0 0 1-1.201 1.202c-.338.172-.694.24-1.074.27a6 6 0 0 1-.288.017.7.7 0 0 1-.137.013h-6.08c-.535 0-.98 0-1.345-.03-.38-.03-.736-.098-1.073-.27a2.75 2.75 0 0 1-1.047-.934.75.75 0 0 1-.176-.31c-.157-.324-.22-.667-.25-1.031-.029-.365-.029-.81-.029-1.345v-1.91c0-.535 0-.98.03-1.345.03-.38.098-.736.27-1.073a2.74 2.74 0 0 1 1.202-1.202c.337-.172.693-.24 1.073-.27.365-.03.81-.03 1.345-.03m7.58 5.8-.001.533-.135-.192a1.75 1.75 0 0 0-2.778-.116l-1.086 1.303-2.411-2.893a1.75 1.75 0 0 0-2.68-.01l-.909 1.073v-1.548c0-.572 0-.957.025-1.253.023-.287.065-.424.111-.514.12-.236.311-.427.547-.547.09-.046.227-.088.514-.111.296-.024.68-.025 1.253-.025h5.1c.572 0 .957 0 1.252.025.288.023.425.065.516.111.235.12.426.311.546.547.046.09.088.227.111.514.024.296.025.68.025 1.253z"
+                  ></path>
+                  <path d="M2 13.75a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 0 1.5h-5.5a.75.75 0 0 1-.75-.75"></path>
+                  <path d="M10.75 13a.75.75 0 0 0 0 1.5h2.5a.75.75 0 0 0 0-1.5z"></path>
+                </svg>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span aria-hidden="true" class="w-5 h-5 ">
+                <svg
+                  class="w-5 h-5  text-[#4A4A4A]"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M1 8a7 7 0 0 1 12.584-4.222 2 2 0 0 0-2.327 1.806 3.5 3.5 0 0 0-1.862 2.166h-1.395a1.255 1.255 0 0 1-.764-2.248l.462-.357a.89.89 0 0 0 .347-.707v-.04c0-.747.606-1.353 1.353-1.353h.057c.193 0 .37-.069.509-.184a5.5 5.5 0 0 0-6.945 2.804l1.89 1.89c.378.379.591.892.591 1.427v.518a1 1 0 0 0 1 1 1.5 1.5 0 0 1 1.5 1.5v1.5q.647-.002 1.253-.143c.029.546.277 1.035.658 1.379a7 7 0 0 1-8.911-6.736"></path>
+                  <path d="M13.25 5a.75.75 0 0 1 .75.75v.75h.75a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 0 0 1.5h.5a2.25 2.25 0 0 1 .25 4.486v.264a.75.75 0 0 1-1.5 0v-.25h-.75a.75.75 0 0 1 0-1.5h2a.75.75 0 0 0 0-1.5h-.5a2.25 2.25 0 0 1-.25-4.486v-.764a.75.75 0 0 1 .75-.75"></path>
+                </svg>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span aria-hidden="true" class="w-5 h-5 ">
+                <svg
+                  class="w-5 h-5  text-[#4A4A4A]"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M7.971 2c-.204 0-.344 0-.465.024a1.25 1.25 0 0 0-.982.982c-.024.121-.024.26-.024.465v9.058c0 .204 0 .344.024.465.099.496.486.883.982.982.121.024.26.024.465.024h.058c.204 0 .344 0 .465-.024a1.25 1.25 0 0 0 .982-.982c.024-.121.024-.26.024-.465v-9.058c0-.204 0-.344-.024-.465a1.25 1.25 0 0 0-.982-.982c-.121-.024-.26-.024-.465-.024z"></path>
+                  <path d="M3.471 7.5c-.204 0-.344 0-.465.024a1.25 1.25 0 0 0-.982.982c-.024.121-.024.26-.024.465v3.558c0 .204 0 .344.024.465.099.496.486.883.982.982.121.024.26.024.465.024h.058c.204 0 .344 0 .465-.024a1.25 1.25 0 0 0 .982-.982c.024-.121.024-.26.024-.465v-3.558c0-.204 0-.344-.024-.465a1.25 1.25 0 0 0-.982-.982c-.121-.024-.26-.024-.465-.024z"></path>
+                  <path d="M12.471 4.5c-.204 0-.344 0-.465.024a1.25 1.25 0 0 0-.982.982c-.024.121-.024.26-.024.465v6.558c0 .204 0 .344.024.465.099.496.486.883.982.982.121.024.26.024.465.024h.058c.204 0 .344 0 .465-.024a1.25 1.25 0 0 0 .982-.982c.024-.121.024-.26.024-.465v-6.558c0-.204 0-.344-.024-.465a1.25 1.25 0 0 0-.982-.982c-.121-.024-.26-.024-.465-.024z"></path>
+                </svg>
+              </span>
+            </a>
+          </li>
+        </div>
+      </div>
+    </section>
+
+  
+  <div class="w-full ">
+
+<div class="flex items-center gap-0  pt-[16px] px-[0px] pb-[12px]">
+          <span class="inline-flex items-center justify-center w-6 h-6 text-[#1a1a1a]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="w-4 h-4 fill-current">
+              <path d="M11 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+              <path fill-rule="evenodd" d="M9.276 1.5c-1.02 0-1.994.415-2.701 1.149l-4.254 4.417a2.75 2.75 0 0 0 .036 3.852l2.898 2.898a2.5 2.5 0 0 0 3.502.033l4.747-4.571a3.25 3.25 0 0 0 .996-2.341v-2.187a3.25 3.25 0 0 0-3.25-3.25zm-1.62 2.19a2.24 2.24 0 0 1 1.62-.69h1.974c.966 0 1.75.784 1.75 1.75v2.187c0 .475-.194.93-.536 1.26l-4.747 4.572a1 1 0 0 1-1.401-.014l-2.898-2.898a1.25 1.25 0 0 1-.016-1.75l4.253-4.418Z" />
+            </svg>
+          </span>
+          <h1 class="text-[1.125rem] font-semibold text-gray-900">
+            <a href="#">Products</a>
+          </h1>
+   </div>
+   
+   <!-- Main Components -->
+   <div class="flex">
+   
+<!-- Cards Coulmn -->
+ 
+     <div class="flex flex-1 flex-col gap-4">
+        
+        <!-- First Card -->
+          <section class="flex-1  bg-[#FFFFFF] p-4 rounded-3xl border border-[#E3E3E3] flex-col gap-6">
+
+            
+            <div class="flex flex-col gap-6 w-full"> 
+                
+        <!-- Title Input -->
+  <div class="space-y-2 bg-[#FDFDFD]">
+
+    <label for="title" class="block text-[13px] font-[450] text-[#303030]">
+      Title
+    </label>
+
+    <div >
+      <input 
+        type="text" 
+        id="title" 
+        name="title" 
+        placeholder="Short sleeve t-shirt"
+        class="w-full 
+        px-3 text-[14px] font-[450] 
+        placeholder:text-[#636363] py-[6px]
+         border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3]
+          outline-none "
+      >
+    </div>
+    
+  </div>
+
+<!-- Description  -->
+   <div class="space-y-2 bg-[#FDFDFD]">
+    <label for="Description" class="block text-[13px] font-[450] text-[#303030]">
+      Description
+    </label>
+
+    <div >
+   <textarea rows="5"
+   class="resize-none style-none w-full 
+        px-3 text-[14px] font-[450] 
+        placeholder:text-[#636363] py-[6px]
+         border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3]
+          outline-none "
+    name="Description" id="Description">
+
+
+   </textarea>
+    </div>
+    
+  </div>
+
+<!-- Media -->
+
+
+<div class="space-y-2 bg-[#FDFDFD]">
+  <span class="block text-[13px] font-[450] text-[#303030]">
+    Media
+  </span>
+
+  <label 
+    for="file-upload" 
+    class="border-dashed border border-[#616161] rounded-[9px] flex flex-col items-center justify-center p-10 bg-[#fbfbfb] hover:bg-[#f7f7f7] cursor-pointer "
+  >
+    <div class="flex items-center gap-2">
+      <span class="rounded-[8px] bg-[#FFFFFF] text-[#303030] px-2 py-1 text-[12px] font-[550]  cursor-pointer shadow-[inset_0_0_0_.5px_#D3D3D3,inset_0_-.5px_0_.5px_#B5B5B5] active:translate-y-[0.0625rem] inline-flex items-center justify-center">
+        Upload new
+      </span>
+      <span class="text-[12px] font-[550] text-[#303030] hover:underline  cursor-pointer">
+        Select existing
+      </span>
+    </div> 
+    <p class="mt-2 text-[12px] text-[#616161] font-[450]">Accepts images, videos, or 3D models</p>
+
+    <input 
+      id="file-upload" 
+      type="file" 
+      class="hidden" 
+      accept="image/*,video/*"
+    >
+  </label>
+</div>
+
+ <!-- Category -->
+<div class="space-y-2">
+  <label for="category" class="block text-[13px] font-[450] text-[#303030]">
+    Category
+  </label>
+
+  <div class="relative flex items-center">
+    <input 
+      type="text" 
+      id="category" 
+      name="category" 
+      placeholder="Choose a product category"
+      class="w-full px-3 pr-10 text-[14px] font-[450] placeholder:text-[#636363] py-[6px] border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3] outline-none"
+    >
+    
+    <div class="absolute inset-y-0 right-0 flex items-center pr-2">
+      <button 
+        type="button" 
+        class="flex items-center justify-center p-1 rounded-md text-gray-500 hover:bg-gray-200 cursor-pointer active:bg-gray-200 transition-colors"
+        aria-label="Select category"
+      >
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          viewBox="0 0 16 16" 
+          fill="currentColor" 
+          class="w-4 h-4"
+        >
+          <path d="M8.884 2.323a1.25 1.25 0 0 0-1.768 0l-2.646 2.647a.749.749 0 1 0 1.06 1.06l2.47-2.47 2.47 2.47a.749.749 0 1 0 1.06-1.06z" />
+          <path d="m11.53 11.03-2.646 2.647a1.25 1.25 0 0 1-1.768 0l-2.646-2.647a.749.749 0 1 1 1.06-1.06l2.47 2.47 2.47-2.47a.749.749 0 1 1 1.06 1.06" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <p class="mt-2 text-[12px] text-[#616161] font-[450]">
+    Determines tax rates and adds metafields to improve search, filter, and cross channel sales
+  </p>
+</div>
+
+             </div>
+
+           
+    </section>
+
+ <!-- Second Card -->
+    <section class="flex-1 bg-white p-4 rounded-xl border border-[#E3E3E3] flex flex-col">
+  
+  <div class="space-y-3 mb-4">
+    <label for="price" class="block text-[13px] font-semibold text-[#303030]">
+      Price
+    </label>
+    <input 
+      type="text" 
+      id="price" 
+      name="price" 
+      placeholder="Rs 0.00"
+      class="w-[180px] px-3 py-1.5 text-[14px] border border-[#B5B5B5] rounded-lg focus:ring-2 focus:ring-[#005bd3] focus:border-transparent outline-none placeholder:text-[#636363]"
+    >
+  </div>
+
+  <div class="h-px bg-[#E3E3E3] -mx-4 mb-4"></div>
+
+  <div class="flex items-center justify-between">
+    <div class="flex flex-wrap gap-2">
+      <button class="px-3 py-1.5 text-[13px] text-[#303030] bg-[#F1F1F1] hover:bg-[#EBEBEB] rounded-lg font-medium transition-colors">
+        Compare at
+      </button>
+      
+      <button class="px-3 py-1.5 text-[13px] text-[#303030] bg-[#F1F1F1] hover:bg-[#EBEBEB] rounded-lg font-medium transition-colors">
+        Unit price
+      </button>
+      
+      <button class="flex items-center gap-1.5 px-3 py-1.5 text-[13px] text-[#303030] bg-[#F1F1F1] hover:bg-[#EBEBEB] rounded-lg font-medium transition-colors">
+        Charge tax
+        <span class="bg-[#E3E3E3] text-[#303030] px-1.5 py-0.5 rounded-md text-[11px] font-bold">Yes</span>
+      </button>
+      
+      <button class="px-3 py-1.5 text-[13px] text-[#303030] bg-[#F1F1F1] hover:bg-[#EBEBEB] rounded-lg font-medium transition-colors">
+        Cost per item
+      </button>
+    </div>
+
+    <button class="p-1 hover:bg-gray-100 rounded-md transition-colors">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="w-5 h-5 fill-[#616161]">
+        <path fill-rule="evenodd" d="M3.72 6.47a.75.75 0 0 1 1.06 0l3.47 3.47 3.47-3.47a.749.749 0 1 1 1.06 1.06l-4 4a.75.75 0 0 1-1.06 0l-4-4a.75.75 0 0 1 0-1.06" />
+      </svg>
+    </button>
+  </div>
+
+</section>
+
+
+        </div>
+    
+         
+
+        
+    </div>
+
+  
+
+</body>
+</html>
+
+
+
+
+ 
+
+
+  

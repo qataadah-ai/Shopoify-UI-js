@@ -251,10 +251,16 @@ let SortMenu = document.querySelector(".Sort-Menu")
 
 SortBtn.addEventListener("click" , () =>{
    SortMenu.classList.toggle("hidden")
+   
 })
 
+// querySelector picks only the FIRST match
+let Channel = document.querySelector(".Channels");
+let PopBox = document.querySelector(".cardPopup-box");
 
-
+Channel.addEventListener("click", () => { 
+  PopBox.classList.toggle("hidden");
+});
 
 
 function filterProducts(status) {
@@ -270,3 +276,5 @@ function filterProducts(status) {
   // 3. Render the table with the new filtered list
   // renderProducts(filteredData);
 }
+
+

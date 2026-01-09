@@ -239,7 +239,7 @@
    <div class="grid md:grid-cols-4 grid-cols-1 gap-4 items-start">
 
 
- <!------------------------------- First Cards Column started Here ------------------------------------------------------------->
+ <!------------------------------- First List Column started Here ------------------------------------------------------------->
  
      <div class="md:col-span-3 col-span-1 flex flex-col gap-4">
         
@@ -726,53 +726,91 @@ Search engine Listing
 
     </section>
 
-<!------------------------------- First Card Column Ended Here ------------------------------------------------------------->
+<!------------------------------- First List Column Ended Here ------------------------------------------------------------->
       </div>   
         
 
-        <!-- Second List Column -->
+ <!------------------------------- Second List Column started Here ------------------------------------------------------------->
 
-    
+    <div class="md:col-span-1 flex flex-col gap-4">
+<!-- Second List first Card  -->
+ <section class="bg-white p-4 rounded-[12px] border border-[#E3E3E3] flex flex-col gap-2 ">
 
- <section class="bg-white p-4 rounded-[12px] border border-[#E3E3E3] flex flex-col ">
   
   <!-- Upper Side -->
-  <div class="flex justify-between pb-4">
-    <span class="font-[600] text-[13px] text-[#303030]">Inventory</span>
-    <span class="flex items-center gap-2">
-      <p class="text-[11px] text-[#616161] font-[500]">Inventory tracked</p>
-      <input type="checkbox" class="h-4 w-4 accent-black block">
-    </span>
-  </div>
-
-  <!-- Main card -->
   
+<div>
+  <h2 class="text-[15px] font-semibold text-[#303030]" >Active</h2>
+</div>
 
-  <!-- Line -->
-<div class="h-px bg-gray-200 -mx-4 mt-4"></div>
 
-  <div class="mt-4 flex items-center justify-between">
-    <div class="flex flex-wrap gap-2">
-      <button class="px-2 py-1 text-[14px] text-[#616161] bg-[#F0F0F0] hover:bg-[#EBEBEB] rounded-[8px] font-[450] cursor-pointer">
-        SKU
-      </button>
-      <button class="px-2 py-1 text-[14px] text-[#616161] bg-[#F0F0F0] hover:bg-[#EBEBEB] rounded-[8px] font-[450] cursor-pointer">
-        Barcode
-      </button>
-      <button class="px-2 py-1 text-[14px] text-[#616161] bg-[#F0F0F0] hover:bg-[#EBEBEB] rounded-[8px] font-[450] cursor-pointer">
-        Sell when out of stock  <span class="bg-[#DDDDDD] text-[#616161] px-1.5 py-0.5 rounded-md font-[550] [12px] ">off</span>
-      </button>
-    </div>
+<div class="">
+  <button class="rounded-[8px] bg-[#FFFFFF] flex justify-between text-[#303030]  pl-[12px] pr-[6px] py-[6px] w-full text-[13px] font-semibold font-sans cursor-pointer shadow-[inset_0_0_0_.5px_#D3D3D3,inset_0_-.5px_0_.5px_#B5B5B5] active:translate-y-[0.0625rem] inline-flex items-center "> Active
+    <span class="flex items-center justify-center p-1 rounded-md text-gray-500 hover:bg-gray-200 cursor-pointer active:bg-gray-200 transition-colors">
+      <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          viewBox="0 0 16 16" 
+          fill="currentColor" 
+          class="w-4 h-4"
+        >
+          <path d="M8.884 2.323a1.25 1.25 0 0 0-1.768 0l-2.646 2.647a.749.749 0 1 0 1.06 1.06l2.47-2.47 2.47 2.47a.749.749 0 1 0 1.06-1.06z" />
+          <path d="m11.53 11.03-2.646 2.647a1.25 1.25 0 0 1-1.768 0l-2.646-2.647a.749.749 0 1 1 1.06-1.06l2.47 2.47 2.47-2.47a.749.749 0 1 1 1.06 1.06" />
+        </svg>
+    </span>
+  </button>
+</div>
 
-    <button class="p-1 hover:bg-gray-100 rounded-md transition-colors">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="w-5 h-5 fill-[#616161]">
-        <path d="M3.72 6.47a.75.75 0 0 1 1.06 0l3.47 3.47 3.47-3.47a.749.749 0 1 1 1.06 1.06l-4 4a.75.75 0 0 1-1.06 0l-4-4a.75.75 0 0 1 0-1.06" />
-      </svg>
-    </button>
-  </div>
 
 </section>
 
+<!-- Second List Second Card -->
+
+<section class="bg-white p-4 rounded-[12px] border border-[#E3E3E3] flex flex-col shadow-sm">
+  
+  <div class="pb-[12px]">
+    <h2 class="font-[600] text-[13px] text-[#303030]">Metafields</h2>
+  </div>
+
+  <div class="flex flex-col gap-3 pt-2">
+    
+    <div class="grid grid-cols-12 items-center gap-4 group">
+      <div class="col-span-4">
+        <label for="snowboard-length" class="text-[13px] text-[#303030] font-[450] cursor-pointer">
+          Snowboard length
+        </label>
+      </div>
+      
+      <div class="col-span-8">
+        <input 
+          id="snowboard-length"
+          type="text" 
+          placeholder=""
+          class="w-full h-[32px] border border-[#E3E3E3] rounded-[8px] px-3 text-[13px] bg-white outline-none hover:border-[#B5B5B5] focus:border-black focus:ring-1 focus:ring-black transition-all shadow-sm"
+        />
+      </div>
+    </div>
+
+    <div class="grid grid-cols-12 items-center gap-4 group">
+      <div class="col-span-4">
+        <label for="binding-mount" class="text-[13px] text-[#303030] font-[450] cursor-pointer">
+          Snowboard binding mount
+        </label>
+      </div>
+      
+      <div class="col-span-8">
+        <input 
+          id="binding-mount"
+          type="text" 
+          placeholder=""
+          class="w-full h-[32px] border border-[#E3E3E3] rounded-[8px] px-3 text-[13px] bg-white outline-none hover:border-[#B5B5B5] focus:border-black focus:ring-1 focus:ring-black transition-all shadow-sm"
+        />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</div>
 
     </div>
 

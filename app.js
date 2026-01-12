@@ -263,6 +263,8 @@ Channel.addEventListener("click", () => {
 });
 
 
+
+
 function filterProducts(status) {
   // 1. Get all filter buttons to update their active styling
   // const buttons = document.querySelectorAll('.filter-btn');
@@ -277,4 +279,4 @@ function filterProducts(status) {
   // renderProducts(filteredData);
 }
 
-
+console.log(document.getElementById("category-input"));

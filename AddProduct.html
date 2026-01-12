@@ -327,46 +327,56 @@
 </div>
 
  <!-- Category -->
-<div class="space-y-2">
-  <label for="category" class="block text-[13px] font-[450] text-[#303030]">
+<div class="space-y-2 relative">
+  <label   for="category" class="block text-[13px] font-[450] text-[#303030]">
     Category
   </label>
 
-  <div class="relative flex items-center">
-    <input 
-      type="text" 
-      id="category" 
-      name="category" 
-      placeholder="Choose a product category"
-      class="w-full px-3 pr-10 text-[.8125rem] font-[450] placeholder:text-[#636363] py-[6px] border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3] outline-none"
-    >
-    
-    <div class="absolute inset-y-0 right-0 flex items-center pr-2">
-      <button 
-        type="button" 
-        class="flex items-center justify-center p-1 rounded-md text-gray-500 hover:bg-gray-200 cursor-pointer active:bg-gray-200 transition-colors"
-        aria-label="Select category"
+  <div class="relative"> 
+    <div   class="relative flex items-center">
+      <input 
+        type="text" 
+        id="category" 
+        placeholder="Choose a product category"
+        class="w-full px-3 pr-10 text-[.8125rem] font-[450] placeholder:text-[#636363] py-[6px] border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3] outline-none"
       >
-        <svg 
-          xmlns="http://www.w3.org/2000/svg" 
-          viewBox="0 0 16 16" 
-          fill="currentColor" 
-          class="w-4 h-4"
-        >
-          <path d="M8.884 2.323a1.25 1.25 0 0 0-1.768 0l-2.646 2.647a.749.749 0 1 0 1.06 1.06l2.47-2.47 2.47 2.47a.749.749 0 1 0 1.06-1.06z" />
-          <path d="m11.53 11.03-2.646 2.647a1.25 1.25 0 0 1-1.768 0l-2.646-2.647a.749.749 0 1 1 1.06-1.06l2.47 2.47 2.47-2.47a.749.749 0 1 1 1.06 1.06" />
-        </svg>
-      </button>
+      
+      <div class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+        <button type="button" class="text-gray-500">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+            <path d="M8.884 2.323a1.25 1.25 0 0 0-1.768 0l-2.646 2.647a.749.749 0 1 0 1.06 1.06l2.47-2.47 2.47 2.47a.749.749 0 1 0 1.06-1.06z" />
+            <path d="m11.53 11.03-2.646 2.647a1.25 1.25 0 0 1-1.768 0l-2.646-2.647a.749.749 0 1 1 1.06-1.06l2.47 2.47 2.47-2.47a.749.749 0 1 1 1.06 1.06" />
+          </svg>
+        </button>
+      </div>
+    </div>
+ <!-- Category Dropdown -->
+
+    <div id="category-dropdown" class=" hidden absolute left-0 right-0 top-full mt-1 bg-white border border-[#E3E3E3] rounded-[10px] shadow-md z-50 p-4">
+      <ul class="max-h-60 overflow-y-auto py-1">
+
+         <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer rounded-[10px] flex items-center justify-between group/item">
+           <span class="text-[14px]">Animals & Pet Supplies</span>
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="w-4 h-4 fill-[#303030] -rotate-90">
+             <path fill-rule="evenodd" d="M3.72 6.47a.75.75 0 0 1 1.06 0l3.47 3.47 3.47-3.47a.749.749 0 1 1 1.06 1.06l-4 4a.75.75 0 0 1-1.06 0l-4-4a.75.75 0 0 1 0-1.06" />
+           </svg>
+         </li>
+
+         <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer flex rounded-[10px] items-center justify-between group/item">
+           <span class="text-[14px]">Animals & Pet Supplies</span>
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="w-4 h-4 fill-[#303030] -rotate-90">
+             <path fill-rule="evenodd" d="M3.72 6.47a.75.75 0 0 1 1.06 0l3.47 3.47 3.47-3.47a.749.749 0 1 1 1.06 1.06l-4 4a.75.75 0 0 1-1.06 0l-4-4a.75.75 0 0 1 0-1.06" />
+           </svg>
+         </li>
+
+         </ul>
     </div>
   </div>
 
   <p class="mt-2 text-[12px] text-[#616161] font-[450]">
-    Determines tax rates and adds metafields to improve search, filter, and cross channel sales
+    Determines tax rates and adds metafields to improve search...
   </p>
 </div>
-
-             </div>
-
            
     </section>
 
@@ -1039,16 +1049,8 @@ Product organization
  <!------------------------------- Second List Column Ended Here ------------------------------------------------------------->
 
     </div>
-   
-
+   <script src="app2.js"></script>
 </body>
 </html>
 
-
-
-
- 
-
-
-  
  

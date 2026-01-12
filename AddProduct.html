@@ -352,17 +352,11 @@
     </div>
  <!-- Category Dropdown -->
 
-    <div id="category-dropdown" class=" hidden absolute left-0 right-0 top-full mt-1 bg-white border border-[#E3E3E3] rounded-[10px] shadow-md z-50 p-4">
-      <ul class="max-h-60 overflow-y-auto py-1">
+       <div id="category-dropdown" class=" hidden absolute left-0 right-0 top-full mt-1 bg-white border border-[#E3E3E3] rounded-[10px] shadow-md z-50 p-4">
+      <ul id="main-list" class="max-h-60 overflow-y-auto py-1">
 
-         <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer rounded-[10px] flex items-center justify-between group/item">
-           <span class="text-[14px]">Animals & Pet Supplies</span>
-           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="w-4 h-4 fill-[#303030] -rotate-90">
-             <path fill-rule="evenodd" d="M3.72 6.47a.75.75 0 0 1 1.06 0l3.47 3.47 3.47-3.47a.749.749 0 1 1 1.06 1.06l-4 4a.75.75 0 0 1-1.06 0l-4-4a.75.75 0 0 1 0-1.06" />
-           </svg>
-         </li>
-
-         <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer flex rounded-[10px] items-center justify-between group/item">
+        
+         <li data-target="AnimalsPetSupplies" id="Animals" class=" main-li px-4 py-2 hover:bg-gray-100 cursor-pointer flex rounded-[10px] items-center justify-between group/item">
            <span class="text-[14px]">Animals & Pet Supplies</span>
            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="w-4 h-4 fill-[#303030] -rotate-90">
              <path fill-rule="evenodd" d="M3.72 6.47a.75.75 0 0 1 1.06 0l3.47 3.47 3.47-3.47a.749.749 0 1 1 1.06 1.06l-4 4a.75.75 0 0 1-1.06 0l-4-4a.75.75 0 0 1 0-1.06" />
@@ -370,6 +364,30 @@
          </li>
 
          </ul>
+
+
+     <ul data-category="AnimalsPetSupplies"  class="hidden w-1/2 max-h-full overflow-y-auto p-4 bg-white space-y-1">
+      <li id="back-to-main" class="px-2 py-2 flex items-center text-[#616161] hover:text-black cursor-pointer font-bold mb-2">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="w-4 h-4 fill-currentColor rotate-90 mr-2">
+           <path fill-rule="evenodd" d="M3.72 6.47a.75.75 0 0 1 1.06 0l3.47 3.47 3.47-3.47a.749.749 0 1 1 1.06 1.06l-4 4a.75.75 0 0 1-1.06 0l-4-4a.75.75 0 0 1 0-1.06" />
+        </svg>
+        <span class="back-to-main">Back</span>
+      </li>
+      <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer rounded-[10px] text-[14px]">Pet Food</li>
+      <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer rounded-[10px] text-[14px]">Pet Toys</li>
+
+    </ul>
+
+<ul id="AnimalsPetSupplies" class="sub-menu hidden max-h-full overflow-y-auto p-4 bg-white space-y-1">
+    <li class="back-to-main px-2 py-2 flex items-center text-[#616161] hover:text-black cursor-pointer font-bold mb-2">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="w-4 h-4 fill-currentColor rotate-90 mr-2">
+        <path fill-rule="evenodd" d="M3.72 6.47a.75.75 0 0 1 1.06 0l3.47 3.47 3.47-3.47a.749.749 0 1 1 1.06 1.06l-4 4a.75.75 0 0 1-1.06 0l-4-4a.75.75 0 0 1 0-1.06" />
+      </svg>
+      <span>Back</span>
+    </li>
+    <li class="select-item px-4 py-2 hover:bg-gray-100 cursor-pointer rounded-[10px] text-[14px]">Pet Food</li>
+    <li class="select-item px-4 py-2 hover:bg-gray-100 cursor-pointer rounded-[10px] text-[14px]">Pet Toys</li>
+  </ul>
     </div>
   </div>
 

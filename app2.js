@@ -8,16 +8,16 @@ input.onclick = () => {
   dropdown.classList.toggle("hidden");
 };
 
-// 2. Click Main Item -> Hide Main List & Show Sub Menu
+
 document.querySelectorAll(".main-li").forEach((li) => {
-  li.onclick = () => {
-    const targetId = li.getAttribute("data-target"); // "AnimalsPetSupplies"
-    const subMenu = document.getElementById(targetId);
-    
-    mainList.classList.add("hidden");
-    subMenu.classList.remove("hidden");
-  };
-});
+    li.onclick = () => {
+        const targetId = li.getAttribute("data-target"); // "AnimalsPetSupplies"
+        const subMenu =  document.getElementById(targetId);
+        mainList.classList.add("hidden");
+        subMenu.classList.remove("hidden");
+    }
+})
+
 
 // 3. Click Back -> Hide Sub Menu & Show Main List
 document.querySelectorAll(".back-to-main").forEach((btn) => {
@@ -36,3 +36,12 @@ document.querySelectorAll("ul[id]:not(#main-list) li:not(#back-to-main)").forEac
     dropdown.classList.add("hidden");
   };
 });
+
+
+const priceBtn = document.getElementById("Price-btn");
+const priceDropdown = document.getElementById("price-dropdown");
+
+priceBtn.onclick=()=>{
+    priceBtn.style.rotate = priceDropdown.classList.contains("hidden") ? "0deg" : "180deg";
+    priceDropdown.classList.toggle("hidden");
+}

@@ -35,12 +35,12 @@
   </head>
 <body>
      
-    <div class="flex overflow-y-auto h-screen bg-[#F1F1F1]">
+    <div class="flex overflow-hidden h-screen bg-[#F1F1F1]">
 
         <!-- SideBar -->
 
          <section >
-      <div class=" h-[100%] bg-[#EBEBEB] p-[10px]  ">
+      <div class="h-screen sticky top-4 z-50 bg-[#EBEBEB] p-[10px]  ">
         <div class="flex mt-10 flex-col gap-4 list-none items-center justify-center">
           <li class="relative group w-fit">
             <p
@@ -221,23 +221,24 @@
     </section>
 
   
-  <div class="w-full ">
+  <div class="w-full overflow-y-auto">
 
-<div class="flex items-center gap-0  pt-[16px] px-[0px] pb-[12px]">
+<div class="flex items-center gap-0  pt-[16px] px-[16px] pb-[12px]">
           <span class="inline-flex items-center justify-center w-6 h-6 text-[#1a1a1a]">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="w-4 h-4 fill-current">
               <path d="M11 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
               <path fill-rule="evenodd" d="M9.276 1.5c-1.02 0-1.994.415-2.701 1.149l-4.254 4.417a2.75 2.75 0 0 0 .036 3.852l2.898 2.898a2.5 2.5 0 0 0 3.502.033l4.747-4.571a3.25 3.25 0 0 0 .996-2.341v-2.187a3.25 3.25 0 0 0-3.25-3.25zm-1.62 2.19a2.24 2.24 0 0 1 1.62-.69h1.974c.966 0 1.75.784 1.75 1.75v2.187c0 .475-.194.93-.536 1.26l-4.747 4.572a1 1 0 0 1-1.401-.014l-2.898-2.898a1.25 1.25 0 0 1-.016-1.75l4.253-4.418Z" />
             </svg>
           </span>
-          <h1 class="text-[1.125rem] font-semibold text-gray-900">
-            <a href="#">Products</a>
+          <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0;"><path d="M4 8L6.5 11L4 14" stroke="#8A8A8A" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          <h1 class="ml-1 text-[1.125rem] font-semibold text-gray-900">
+            <a href="#">Add product</a>
           </h1>
    </div>
    
    <!-- Main Components -->
 
-   <div class="grid md:grid-cols-4 grid-cols-1 gap-4 items-start">
+   <div class="grid md:grid-cols-4 grid-cols-1 gap-4 items-start px-4">
 
 
  <!------------------------------- First List Column started Here ------------------------------------------------------------->
@@ -264,7 +265,7 @@
         name="title" 
         placeholder="Short sleeve t-shirt"
         class="w-full 
-        px-3 text-[14px] font-[450] 
+        px-3 text-[.8125rem] font-[450] 
         placeholder:text-[#636363] py-[6px]
          border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3]
           outline-none "
@@ -337,7 +338,7 @@
       id="category" 
       name="category" 
       placeholder="Choose a product category"
-      class="w-full px-3 pr-10 text-[14px] font-[450] placeholder:text-[#636363] py-[6px] border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3] outline-none"
+      class="w-full px-3 pr-10 text-[.8125rem] font-[450] placeholder:text-[#636363] py-[6px] border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3] outline-none"
     >
     
     <div class="absolute inset-y-0 right-0 flex items-center pr-2">
@@ -381,29 +382,29 @@
       id="price" 
       name="price" 
       placeholder="Rs 0.00"
-      class="w-[180px] px-3 py-1.5 text-[14px] border border-[#B5B5B5] rounded-lg focus:ring-2 focus:ring-[#005bd3] focus:border-transparent outline-none placeholder:text-[#636363]"
+      class="w-[180px] px-3 py-1.5 text-[.8125rem] border border-[#B5B5B5] rounded-lg focus:ring-2 focus:ring-[#005bd3] focus:border-transparent outline-none placeholder:text-[#636363]"
     >
   </div>
 
-  <div class="h-px bg-gray-300 -mx-4 mb-4"></div>
+  <div class="h-px bg-[#E3E3E3] -mx-4 mb-4"></div>
 
   <div class="flex items-center justify-between">
     
     <div class="flex flex-wrap gap-2">
-      <button class="px-2 py-1 text-[14px] text-[#616161] bg-[#F0F0F0] hover:bg-[#EBEBEB] rounded-[8px] font-[450] cursor-pointer">
+      <button class="px-2 py-1 text-[13px] text-[#616161] bg-[#F0F0F0] hover:bg-[#EBEBEB] rounded-[8px] font-[450] cursor-pointer">
         Compare at
       </button>
-      
-      <button class="px-2 py-1 text-[14px] text-[#616161] bg-[#F0F0F0] hover:bg-[#EBEBEB] rounded-[8px] font-[450] cursor-pointer">
+
+      <button class="px-2 py-1 text-[13px] text-[#616161] bg-[#F0F0F0] hover:bg-[#EBEBEB] rounded-[8px] font-[450] cursor-pointer">
         Unit price
       </button>
       
-      <button class="px-2 py-1 text-[14px] text-[#616161] bg-[#F0F0F0] hover:bg-[#EBEBEB] rounded-[8px] font-[450] cursor-pointer">
+      <button class="px-2 py-1 text-[13px] text-[#616161] bg-[#F0F0F0] hover:bg-[#EBEBEB] rounded-[8px] font-[450] cursor-pointer">
         Charge tax
-        <span class="bg-[#DDDDDD] text-[#616161] px-1.5 py-0.5 rounded-md font-[550] [12px] ">Yes</span>
+        <span class="bg-[#DDDDDD] text-[#616161] px-2 py-0.5 rounded-md text-[.8125rem] font-[450]">Yes</span>
       </button>
-      
-      <button class="px-2 py-1 text-[14px] text-[#616161] bg-[#F0F0F0] hover:bg-[#EBEBEB] rounded-[8px] font-[450] cursor-pointer">
+
+      <button class="px-2 py-1 text-[13px] text-[#616161] bg-[#F0F0F0] hover:bg-[#EBEBEB] rounded-[8px] font-[450] cursor-pointer">
         Cost per item
       </button>
     </div>
@@ -423,7 +424,7 @@
   
   <!-- Upper Side -->
   <div class="flex justify-between pb-4">
-    <span class="font-[600] text-[13px] text-[#303030]">Inventory</span>
+    <span class="font-[600] text-[.8125rem] text-[#303030]">Inventory</span>
     <span class="flex items-center gap-2">
       <p class="text-[11px] text-[#616161] font-[500]">Inventory tracked</p>
       <input type="checkbox" class="h-4 w-4 accent-black block">
@@ -436,14 +437,14 @@
     <!-- First Row -->
     <div class="flex items-center bg-[#F7F7F7]  border-b border-[#E3E3E3] ">
       <div class="flex w-1/2 items-center gap-1.5 py-[14px] pl-3 pr-[6px] ">
-        <span class="text-[13px] font-semibold text-[#616161]">Quantity</span>
+        <span class="text-[0.75rem] font-semibold text-[#616161]">Quantity</span>
         <button type="button" class="rounded p-1 hover:bg-gray-200 transition-colors cursor-pointer">
           <svg class="h-4 w-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
             <path fill-rule="evenodd" d="M13.655 2.344a2.694 2.694 0 0 0-3.81 0l-.599.599-.009-.009-1.06 1.06.009.01-5.88 5.88a2.75 2.75 0 0 0-.806 1.944v1.922a.75.75 0 0 0 .75.75h1.922a2.75 2.75 0 0 0 1.944-.806l7.54-7.54a2.694 2.694 0 0 0 0-3.81Zm-4.409 2.72-5.88 5.88a1.25 1.25 0 0 0-.366.884v1.172h1.172c.331 0 .65-.132.883-.366l5.88-5.88zm2.75.629.599-.599a1.196 1.196 0 0 0-1.69-1.69l-.598.6Z" />
           </svg>
         </button>
       </div>
-      <div class=" w-1/2 py-[14px] pr-3 pl-[6px] text-right text-[13px] font-semibold text-[#616161]">
+      <div class=" w-1/2 py-[14px] pr-3 pl-[6px] text-right text-[0.75rem] font-semibold text-[#616161]">
         Quantity
       </div>
     </div>
@@ -459,7 +460,7 @@
             <input 
               type="number" 
               value="0" 
-              class="w-[125px] text-[14px] font-[450] placeholder:text-[#636363] py-[6px] px-[12px] border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3] outline-none"
+              class="w-[125px] text-[.8125rem] font-[450] placeholder:text-[#636363] py-[6px] px-[12px] border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3] outline-none"
             />
           </div>
         </div>
@@ -475,7 +476,7 @@
             <input 
               type="number" 
               value="0" 
-              class="w-[125px] text-[14px] font-[450] placeholder:text-[#636363] py-[6px] px-[12px] border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3] outline-none"
+              class="w-[125px] text-[.8125rem] font-[450] placeholder:text-[#636363] py-[6px] px-[12px] border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3] outline-none"
             />
           </div>
         </div>
@@ -484,18 +485,18 @@
   </div>
 
   <!-- Line -->
-<div class="h-px bg-gray-200 -mx-4 mt-4"></div>
+<div class="h-px bg-[#E3E3E3] -mx-4 mt-4"></div>
 
   <div class="mt-4 flex items-center justify-between">
     <div class="flex flex-wrap gap-2">
-      <button class="px-2 py-1 text-[14px] text-[#616161] bg-[#F0F0F0] hover:bg-[#EBEBEB] rounded-[8px] font-[450] cursor-pointer">
+      <button class="px-2 py-1 text-[13px] text-[#616161] bg-[#F0F0F0] hover:bg-[#EBEBEB] rounded-[8px] font-[450] cursor-pointer">
         SKU
       </button>
-      <button class="px-2 py-1 text-[14px] text-[#616161] bg-[#F0F0F0] hover:bg-[#EBEBEB] rounded-[8px] font-[450] cursor-pointer">
+      <button class="px-2 py-1 text-[13px] text-[#616161] bg-[#F0F0F0] hover:bg-[#EBEBEB] rounded-[8px] font-[450] cursor-pointer">
         Barcode
       </button>
-      <button class="px-2 py-1 text-[14px] text-[#616161] bg-[#F0F0F0] hover:bg-[#EBEBEB] rounded-[8px] font-[450] cursor-pointer">
-        Sell when out of stock  <span class="bg-[#DDDDDD] text-[#616161] px-1.5 py-0.5 rounded-md font-[550] [12px] ">off</span>
+      <button class="px-2 py-1 text-[13px] text-[#616161] bg-[#F0F0F0] hover:bg-[#EBEBEB] rounded-[8px] font-[450] cursor-pointer">
+        Sell when out of stock  <span class="bg-[#DDDDDD] text-[#616161] px-2 py-0.5 rounded-md text-[.8125rem] font-[450]">Off</span>
       </button>
     </div>
 
@@ -514,7 +515,7 @@
   <!-- Upper Version -->
   <div class="flex justify-between items-center pb-4">
 
-    <span class="font-[600] text-[13px] text-[#303030]">Shipping</span>
+    <span class="font-[600] text-[.8125rem] text-[#303030]">Shipping</span>
 
     <div class="flex items-center gap-2">
       <p class="text-[11px] text-[#616161] font-[500]">Physical product</p>
@@ -531,9 +532,9 @@
     <div class="flex-1 flex flex-col gap-1.5">
 
       <div class="flex items-center gap-1">
-        <label class="text-[13px] font-[500] text-[#303030]">Package</label>
-        <span class="text-gray-400">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-3.5 h-3.5">
+        <label class="text-[.8125rem] font-[450] text-[#303030]">Package</label>
+        <span class="text-gray-400 text-[13px]">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
             <path d="M8 12a.75.75 0 0 1-.75-.75v-3.5a.75.75 0 0 1 1.5 0v3.5a.75.75 0 0 1-.75.75M7 5a1 1 0 1 1 2 0 1 1 0 0 1-2 0" />
             <path fill-rule="evenodd" d="M15 8a7 7 0 1 1-14 0 7 7 0 0 1 14 0m-1.5 0a5.5 5.5 0 1 1-11 0 5.5 5.5 0 1 1 11 0" clip-rule="evenodd" />
           </svg>
@@ -560,13 +561,17 @@
   </svg>
 </span>
         </div>
-        <input placeholder="Store default • Sample box - 22" 
+        <input placeholder="" 
          class="w-full 
         pl-9 text-[14px] font-[450] 
         placeholder:text-[#636363] py-[6px]
          border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3]
           outline-none ">
-
+<div class=" absolute inset-0 flex items-center pl-9 ">
+    <span class="text-[.8125rem] font-[450] text-[#303030]">Store default</span>
+    <span class="text-[.8125rem] font-[450] text-[#303030] mx-1">•</span>
+    <span class="text-[.8125rem] font-[450] text-[#616161]">Sample box - 22 × 13.7 × 4.2 cm, 0 kg</span>
+  </div>
         <div class="absolute inset-y-0 right-0 pr-2 flex items-center pointer-events-none">
           <svg class="h-4 w-4 text-gray-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
         </div>
@@ -574,12 +579,12 @@
     </div>
 
     <div class="w-full md:w-[220px] flex flex-col gap-1.5">
-      <label class="text-[13px] font-[500] text-[#303030]">Product weight</label>
+      <label class="text-[.8125rem] font-[450] text-[#303030]">Product weight</label>
       <div class="flex gap-2">
-        <input type="number" value="0.0" class="w-full py-2 px-3 text-[13px] outline-none  border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3]
+        <input type="number" value="0.0" class="w-full py-[6px] px-3 text-[.8125rem] font-[450] outline-none  border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3]
           outline-none">
         <div class="relative w-20">
-          <select class="w-full bg-white border border-[#616161] rounded-[10px] py-2 px-2 text-[13px] appearance-none outline-none focus:ring-1 focus:ring-[#005bd3]">
+          <select class="w-full bg-white border border-[#616161] rounded-[10px] py-2 px-2  text-[.8125rem] font-[450] appearance-none outline-none focus:ring-1 focus:ring-[#005bd3]">
             <option>kg</option>
             <option>lb</option>
           </select>
@@ -596,10 +601,10 @@
   <!-- BUTTONS -->
   <div class="mt-4 flex items-center justify-between">
     <div class="flex flex-wrap gap-2">
-      <button class="px-2.5 py-1 text-[13px] text-[#616161] bg-[#F1F1F1] hover:bg-[#EBEBEB] rounded-[8px] font-[500] transition-colors">
+      <button class="px-2 py-1 text-[.8125rem]  text-[#616161] bg-[#F1F1F1] hover:bg-[#EBEBEB] rounded-[8px] font-[500] transition-colors">
         Country of origin
       </button>
-      <button class="px-2.5 py-1 text-[13px] text-[#616161] bg-[#F1F1F1] hover:bg-[#EBEBEB] rounded-[8px] font-[500] transition-colors">
+      <button class="px-2 py-1 text-[.8125rem] text-[#616161] bg-[#F1F1F1] hover:bg-[#EBEBEB] rounded-[8px] font-[500] transition-colors">
         HS Code
       </button>
     </div>
@@ -618,8 +623,8 @@
     <section class="bg-white p-4 rounded-[12px] border border-[#E3E3E3] ">
 <div class="pb-[8px]">
 
-  <h2 class="text-[#303030] font-semibold">
-Variant
+  <h2 class="text-[#303030] text-[.8125rem] font-[600]">
+Variants
 </h2>
 </div>
 
@@ -635,7 +640,7 @@ Variant
     <path fill-rule="evenodd" d="M8 15a7 7 0 1 0 0-14 7 7 0 0 0 0 14m0-1.5a5.5 5.5 0 1 0 0-11 5.5 5.5 0 1 0 0 11"></path>
   </svg>
 </span>
-  <p class="text-[12px] font-[550] text-[#4a4a4]">Add options like size or colors</p>
+  <p class="text-[12px] font-[550] text-[#303030]">Add options like size or colors</p>
 </div>
 </div>
     </section>
@@ -645,7 +650,7 @@ Variant
    <section class="bg-white p-4 rounded-[12px] border border-[#E3E3E3] ">
 <div class="pb-[8px]">
 
-  <h2 class="text-[#303030] font-semibold">
+  <h2 class="text-[#303030] text-[.8125rem] font-[600]">
 Purchase options
 </h2>
 </div>
@@ -662,7 +667,7 @@ Purchase options
     <path fill-rule="evenodd" d="M8 15a7 7 0 1 0 0-14 7 7 0 0 0 0 14m0-1.5a5.5 5.5 0 1 0 0-11 5.5 5.5 0 1 0 0 11"></path>
   </svg>
 </span>
-  <p class="text-[12px] font-[550] text-[#4a4a4]">Subscriptions,preorders,try before you buy,and more</p>
+  <p class="text-[12px] font-[550] text-[#303030]">Subscriptions,preorders,try before you buy,and more</p>
 </div>
 </div>
     </section>
@@ -672,7 +677,7 @@ Purchase options
    <section class="bg-white p-4 rounded-[12px] border border-[#E3E3E3] flex flex-col">
   
   <div class="pb-[12px]">
-    <h2 class="font-[600] text-[13px] text-[#303030]">Metafields</h2>
+    <h2 class="font-[600] text-[.8125rem] text-[#303030]">Metafields</h2>
   </div>
 
   <div class="flex flex-col gap-3 pt-2">
@@ -710,7 +715,7 @@ Purchase options
 
 <div class="flex justify-between pb-[8px]">
 
-  <h2 class="text-[#303030] font-semibold">
+  <h2 class="text-[#303030] text-[.8125rem] font-semibold">
 Search engine Listing
 </h2>
  <button type="button" class="rounded p-1 hover:bg-gray-200 transition-colors cursor-pointer">
@@ -721,7 +726,7 @@ Search engine Listing
 </div>
 
 <div class="pt-[8px]">
-  <p class="text-[13px] font-[450] text-[#4a4a4]">Add a title and description to see how this product might appear in search engine</p>
+  <p class="text-[.8125rem] font-[450] text-[#303030]">Add a title and description to see how this product might appear in search engine</p>
 
 </div>
 
@@ -741,12 +746,12 @@ Search engine Listing
   <!-- Upper Side -->
   
 <div>
-  <h2 class="text-[15px] font-semibold text-[#303030]" >Active</h2>
+  <h2 class="text-[.8125rem] font-semibold text-[#303030]" >Status</h2>
 </div>
 
 
-<div class="">
-  <button class="rounded-[8px] bg-[#FFFFFF] flex justify-between text-[#303030]  pl-[12px] pr-[6px] py-[6px] w-full text-[13px] font-semibold font-sans cursor-pointer shadow-[inset_0_0_0_.5px_#D3D3D3,inset_0_-.5px_0_.5px_#B5B5B5] active:translate-y-[0.0625rem] inline-flex items-center "> Active
+<div>
+  <button class="rounded-[8px] bg-[#FFFFFF] flex justify-between text-[#303030] text-[.8125rem] font-[550] pl-[12px] pr-[6px] py-[6px] w-full font-sans cursor-pointer shadow-[inset_0_0_0_.5px_#D3D3D3,inset_0_-.5px_0_.5px_#B5B5B5] active:translate-y-[0.0625rem] inline-flex items-center "> Active
     <span class="flex items-center justify-center p-1 rounded-md text-gray-500 hover:bg-gray-200 cursor-pointer active:bg-gray-200 transition-colors">
       <svg 
           xmlns="http://www.w3.org/2000/svg" 
@@ -771,7 +776,7 @@ Search engine Listing
 
   <div class="flex justify-between pb-[8px]">
 
-  <h2 class="text-[#303030] font-semibold">
+  <h2 class="text-[#303030] text-[.8125rem] font-semibold">
 Publishing
 </h2>
 <button type="button" class="inline-flex items-center justify-center w-7 h-7 rounded-[6px] cursor-pointer hover:bg-[#F2F2F2] transition-colors group">
@@ -795,7 +800,7 @@ Publishing
 <div class="flex flex-col gap-1">
   <a href="#" >
    
- <button class="rounded-[8px]  flex justify-between text-[#303030] bg-[#EBEBEB]  text-[16px] font-[450] py-1 px-2 cursor-pointer inline-flex items-center "> Online store
+ <button class="rounded-[8px]  flex justify-between text-[#303030] bg-[#EBEBEB]  text-[.8125rem] font-[450] py-1 px-2 cursor-pointer inline-flex items-center "> Online store
    <span  class="inline-flex items-center justify-center w-7 h-7 rounded-[6px] cursor-pointer hover:bg-[#F1F1F1] transition-colors group">
     <svg 
       xmlns="http://www.w3.org/2000/svg" 
@@ -828,7 +833,7 @@ Publishing
       <path fill-rule="evenodd" d="M15 8a7 7 0 1 1-14 0 7 7 0 0 1 14 0m-1.5 0a5.5 5.5 0 1 1-11 0 5.5 5.5 0 1 1 11 0"></path>
     </svg>
   </span>
-Point of Sales
+ <p class=" text-[.8125rem] font-[450] text-[#786E32]">Point of Sales</p>
  <!-- Dropdown Icon -->
    <span class="inline-flex items-center justify-center w-5 h-5">
   <svg 
@@ -850,8 +855,8 @@ Point of Sales
   <div class="h-px bg-gray-200 -mx-4 mt-4"></div>
 
   <div class="space-y-2 mt-4">
-    <h1 class="text-[#303030] font-semibold">Region Catalogs</h1>
-    <button class="px-2 py-1 text-[14px] text-[#616161] bg-[#F0F0F0] hover:bg-[#EBEBEB] rounded-[8px] font-[450] cursor-pointer">Mexico</button>
+    <h1 class="text-[#303030] text-[.8125rem] font-semibold">Region Catalogs</h1>
+    <button class="px-2 py-1 text-[13px] text-[#303030] bg-[#F0F0F0] hover:bg-[#EBEBEB] rounded-[8px] font-[450] cursor-pointer">Mexico</button>
   </div>
 </section>
 
@@ -862,7 +867,7 @@ Point of Sales
 
  <div class="flex gap-1 pb-[8px]">
 
-  <h2 class="text-[#303030] font-semibold">
+  <h2 class="text-[#303030] text-[.8125rem] font-semibold">
 Product organization
 </h2>
 <span class="inline-flex items-center justify-center pr-2 ">
@@ -883,7 +888,7 @@ Product organization
 
 
   <div class="flex-col flex gap-2"> 
-    <label for="title" class="text-[#303030] font-[500] ">
+    <label for="title" class="text-[#303030] text-[.8125rem] font-[500] ">
      Type
     </label>
 
@@ -905,7 +910,7 @@ Product organization
 
 
    <div class="flex-col flex gap-2"> 
-    <label for="title" class="text-[#303030] font-[500] ">
+    <label for="title" class="text-[#303030] text-[.8125rem] font-[500] ">
      Vendor
     </label>
 
@@ -927,14 +932,14 @@ Product organization
     
 
    <div class="flex-col flex gap-2"> 
-    <label for="title" class="text-[#303030] font-[500] ">
+    <label for="title" class="text-[#303030] text-[.8125rem] font-[500] ">
      Collection
     </label>
 
     <div class="relative">
       <span class="absolute left-3 top-1/2 -translate-y-1/2 flex items-center pointer-events-none">
   <svg
-    class="w-5 h-5 text-[#303030]"
+    class="w-4 h-4 text-[#303030] text-[13px]"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 16 16"
     fill="currentColor"
@@ -961,7 +966,7 @@ Product organization
     
 
        <div class="flex-col flex gap-2"> 
-    <label for="title" class="text-[#303030] font-[500] ">
+    <label for="title" class="text-[#303030] text-[.8125rem] font-[500]] ">
      Tags
     </label>
 
@@ -992,7 +997,7 @@ Product organization
   <!-- Upper Side -->
   
 <div>
-  <h2 class=" font-[450] text-[#303030]" >Theme template</h2>
+  <h2 class=" font-[450] text-[.8125rem] text-[#303030]" >Theme template</h2>
 </div>
 
 
@@ -1003,7 +1008,7 @@ Product organization
         name="title" 
        placeholder="Deafult product"
         class="w-full 
-        px-3  font-[450] 
+        px-3 text-[.8125rem] font-[450] 
         placeholder:text-[#303030] py-[6px]
          border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3]
           outline-none "
@@ -1027,9 +1032,14 @@ Product organization
       </button>
     </div>
 </section>
+
+
 </div>
 
+ <!------------------------------- Second List Column Ended Here ------------------------------------------------------------->
+
     </div>
+   
 
 </body>
 </html>

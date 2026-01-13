@@ -434,11 +434,11 @@
     
     <div id="price-buttons"
     class="flex flex-wrap gap-2 ">
-      <button class="px-2 py-1 text-[13px] text-[#616161] bg-[#F0F0F0] hover:bg-[#EBEBEB] rounded-[8px] font-[450] cursor-pointer">
+      <button id="Compare-at-btn" class="px-2 py-1 text-[13px] text-[#616161] bg-[#F0F0F0] hover:bg-[#EBEBEB] rounded-[8px] font-[450] cursor-pointer">
         Compare at
       </button>
 
-      <button class="px-2 py-1 text-[13px] text-[#616161] bg-[#F0F0F0] hover:bg-[#EBEBEB] rounded-[8px] font-[450] cursor-pointer">
+      <button id="Unit-price-btn"  class="px-2 py-1 text-[13px] text-[#616161] bg-[#F0F0F0] hover:bg-[#EBEBEB] rounded-[8px] font-[450] cursor-pointer">
         Unit price
       </button>
       
@@ -452,7 +452,7 @@
       </button>
     </div>
 
-   <button id="Price-btn-dropdown-icon" class="absolute right-0 top-0 p-1 hover:bg-gray-100 rounded-md transition-all">
+   <button id="Price-btn-dropdown-icon" class="absolute right-0 top-0 p-1 cursor-pointer rounded-md transition-all">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="w-5 h-5 fill-[#616161]">
         <path fill-rule="evenodd" d="M3.72 6.47a.75.75 0 0 1 1.06 0l3.47 3.47 3.47-3.47a.749.749 0 1 1 1.06 1.06l-4 4a.75.75 0 0 1-1.06 0l-4-4a.75.75 0 0 1 0-1.06" />
       </svg>
@@ -521,7 +521,7 @@
 
     <!-- Total amount -->
     <div class="space-y-1">
-      <label class="text-[0.8125rem] font-[450] text-[#303030]">
+      <label for="toal-amount" class="text-[0.8125rem] font-[450] text-[#303030]">
         Total amount
       </label>
 
@@ -529,6 +529,7 @@
         <input
           type="text"
           placeholder="0"
+          id="toal-amount"
           class="w-full pl-3 pr-3 py-[6px]
            text-[.8125rem] font-[450]
            border border-[#616161]
@@ -569,7 +570,7 @@
 
     <!-- Base measure -->
     <div class="space-y-1">
-      <label class="text-[0.8125rem] font-[450] text-[#303030]">
+      <label for="Base-measure" class="text-[0.8125rem] font-[450] text-[#303030]">
         Base measure
       </label>
 
@@ -577,6 +578,7 @@
         <input
           type="text"
           value="1"
+          id="Base-measure"
           class="w-full pl-3 pr-3 py-[6px]
            text-[.8125rem] font-[450]
            border border-[#616161]
@@ -640,7 +642,6 @@
 
   </div>
 
-
 </div>
 
   </div>
@@ -665,19 +666,9 @@
   </div>
 
 </div>
-    
 
   </div>
-
-
-
-
-
-  
-
-
-
-    </section>
+   </section>
 
 <!-- Third Card -->
 

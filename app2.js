@@ -50,7 +50,6 @@ priceBtn.onclick=()=>{
 }
 
 // Unit Price Dropdown
-
 const unitInput = document.getElementById("unit-price");
 const unitDropdown = document.getElementById("unit-price-dropdown");
 const CancerBtn = document.getElementById("unit-price-cancel-btn");
@@ -63,3 +62,21 @@ CancerBtn.onclick = ( )=>{
 } 
 
 
+const CompareBtn = document.getElementById("Compare-at-btn")
+
+CompareBtn.onclick = () =>{
+   priceDropdown.classList.remove("hidden");
+    priceButtons.classList.add("hidden");
+}
+
+const totalAmountInput = document.querySelector('#toal-amount');
+
+const UnitPriceBtn = document.getElementById("Unit-price-btn")
+
+UnitPriceBtn.onclick = () => {
+    priceDropdown.classList.remove("hidden");
+    priceButtons.classList.add("hidden");
+    unitDropdown.classList.remove("hidden"); 
+  
+    totalAmountInput.focus();
+};

@@ -430,7 +430,7 @@
 
   <div class="h-px bg-[#E3E3E3] -mx-4 mb-4"></div>
 
-  <div class="flex items-start justify-between relative">
+  <div class="flex items-start justify-between relative min-h-[32px]">
     
     <div id="price-buttons"
     class="flex flex-wrap gap-2 ">
@@ -459,7 +459,7 @@
     </button>
 
 <!-- Dropdwon for Price -->
-  <div id="price-dropdown" class=" space-y-4 w-full mt-5 hidden">
+  <div id="price-dropdown" class=" space-y-4 w-full  hidden">
 
   <!-- Header -->
   
@@ -468,10 +468,10 @@
     </h3>
 
   <!-- Inputs -->
-  <div class="flex gap-4">
+  <div class="flex flex-wrap sm:flex-nowrap gap-4">
 
     <!-- Compare-at price -->
-   <div class="space-y-2  relative w-1/2">
+   <div class="space-y-2 relative w-full sm:w-1/2">
   <label for="Compare-at " class="block text-[0.8125rem] font-[450] text-[#303030]">
     Compare-at price
   </label>
@@ -484,7 +484,7 @@
     class="w-full relative pl-9 pr-3 text-[.8125rem] font-[450] placeholder:text-[#636363] py-[6px] border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3] outline-none"
   >
 
-  <span class="absolute left-3 top-[33.5px] text-[.8125rem] font-[450] flex items-center text-[#616161]">
+  <span class="absolute left-3 top-[33.5px] text-[.8125rem] font-[450] text-[#616161]">
     Rs
   </span>
 </div>
@@ -739,8 +739,10 @@
   <!-- Line -->
 <div class="h-px bg-[#E3E3E3] -mx-4 mt-4"></div>
 
-  <div class="mt-4 flex items-center justify-between">
-    <div class="flex flex-wrap gap-2">
+
+  <div  class="flex items-start justify-between relative mt-4">
+    
+    <div id="Inventory-btns"  class="flex flex-wrap gap-2">
       <button class="px-2 py-1 text-[13px] text-[#616161] bg-[#F0F0F0] hover:bg-[#EBEBEB] rounded-[8px] font-[450] cursor-pointer">
         SKU
       </button>
@@ -752,12 +754,76 @@
       </button>
     </div>
 
-    <button class="p-1 hover:bg-gray-100 rounded-md transition-colors">
+   <button id="Inventory-dropdrown-btn" class="absolute right-0 top-0 p-1 cursor-pointer rounded-md transition-all">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="w-5 h-5 fill-[#616161]">
-        <path d="M3.72 6.47a.75.75 0 0 1 1.06 0l3.47 3.47 3.47-3.47a.749.749 0 1 1 1.06 1.06l-4 4a.75.75 0 0 1-1.06 0l-4-4a.75.75 0 0 1 0-1.06" />
+        <path fill-rule="evenodd" d="M3.72 6.47a.75.75 0 0 1 1.06 0l3.47 3.47 3.47-3.47a.749.749 0 1 1 1.06 1.06l-4 4a.75.75 0 0 1-1.06 0l-4-4a.75.75 0 0 1 0-1.06" />
       </svg>
     </button>
+
+  <!-- Dropdwon for Inventory -->
+
+<div id="Inventory-dropdrown" class=" flex flex-col gap-4 w-full hidden">
+
+  <!-- Header -->
+  
+    <h3 class="text-[12px] font-semibold text-[#000000]">
+      More Details
+    </h3>
+
+  <!-- Inputs -->
+  <div class="flex flex-wrap sm:flex-nowrap gap-4"> 
+
+    <!-- Compare-at price -->
+   <div class=" flex flex-col w-full space-y-2 w-full ">
+  <label for="SKU " class=" text-[0.8125rem] font-[450] text-[#303030]">
+    SKU (Stock Keeping Unit)
+  </label>
+
+  <input 
+    type="text" 
+    id="SKU " 
+    name="SKU" 
+    placeholder="0.00 "
+    class="w-full relative pl-3 pr-3 text-[.8125rem] font-[450] placeholder:text-[#636363] py-[6px] border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3] outline-none"
+  >
+
+</div>
+
+<div class=" flex flex-col w-full space-y-2 w-full  ">
+
+  <label for="Barcode" class=" text-[0.8125rem] font-[450] text-[#303030]">
+    Barcode (ISBN, UPC, GTIN, etc.)
+  </label>
+
+  <input
+    type="text"
+    name="Barcode"
+    id="Barcode"
+    class="w-full pl-3 pr-3 py-[6px]
+           text-[.8125rem] font-[450]
+           border border-[#616161]
+           rounded-[9px]
+           focus:ring-1 focus:ring-[#005bd3]
+           outline-none"
+  />
+
+</div>
+
   </div>
+
+  <!-- Checkbox -->
+  <label class="flex items-center gap-2 text-[13px] text-[#303030]">
+    <input type="checkbox" class="w-4 h-4 rounded accent-black" />
+   Continue selling when out of stock 
+  </label>
+
+</div>
+  </div>
+
+
+
+
+
 
     </section>
 

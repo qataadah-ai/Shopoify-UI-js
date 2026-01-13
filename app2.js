@@ -19,10 +19,8 @@ document.querySelectorAll(".main-li").forEach((li) => {
 })
 
 
-// 3. Click Back -> Hide Sub Menu & Show Main List
 document.querySelectorAll(".back-to-main").forEach((btn) => {
   btn.onclick = () => {
-    // Hide all lists that have the "Back" button (your sub-menus)
     btn.closest('ul').classList.add("hidden");
     mainList.classList.remove("hidden");
   };
@@ -80,3 +78,14 @@ UnitPriceBtn.onclick = () => {
   
     totalAmountInput.focus();
 };
+
+
+const inventoryBtn = document.getElementById("Inventory-dropdrown-btn");
+const inventoryDropdown = document.getElementById("Inventory-dropdrown");
+const inventoryButtons = document.getElementById("Inventory-btns");
+
+inventoryBtn.onclick = () => {
+  inventoryBtn.style.rotate = inventoryDropdown.classList.contains("hidden") ? "180deg" : "0deg";
+  inventoryDropdown.classList.toggle("hidden");
+  inventoryButtons.classList.toggle("hidden");
+}

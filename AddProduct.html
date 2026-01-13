@@ -848,89 +848,75 @@
    
   <div class="flex flex-col md:flex-row gap-4 mb-4">
     
-    <div class="flex-1 flex flex-col gap-1.5">
-
-      <div class="flex items-center gap-1">
-        <label class="text-[.8125rem] font-[450] text-[#303030]">Package</label>
-        <span class="text-[#868686] text-[13px]">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
-            <path d="M8 12a.75.75 0 0 1-.75-.75v-3.5a.75.75 0 0 1 1.5 0v3.5a.75.75 0 0 1-.75.75M7 5a1 1 0 1 1 2 0 1 1 0 0 1-2 0" />
-            <path fill-rule="evenodd" d="M15 8a7 7 0 1 1-14 0 7 7 0 0 1 14 0m-1.5 0a5.5 5.5 0 1 1-11 0 5.5 5.5 0 1 1 11 0" clip-rule="evenodd" />
-          </svg>
-        </span>
-      </div>
-      
-      <div class="relative">
-        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-[#616161]">
-          <span class="inline-flex items-center justify-center">
-  <svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    viewBox="0 0 16 16" 
-    class="w-4 h-4 fill-current text-[#4A4A4A]"
-
-  >
-    <path 
-      fill-rule="evenodd" 
-      d="M5 7a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zm.5 3.5v-2h3v2z"
-    />
-    <path 
-      fill-rule="evenodd" 
-      d="M3.315 2.45a2.25 2.25 0 0 1 1.836-.95h5.796c.753 0 1.455.376 1.872 1.002l1.22 1.828c.3.452.461.983.461 1.526v6.894a1.75 1.75 0 0 1-1.75 1.75h-9.5a1.75 1.75 0 0 1-1.75-1.75v-6.863c0-.57.177-1.125.506-1.59l1.309-1.848Zm1.836.55a.75.75 0 0 0-.612.316l-.839 1.184h3.55v-1.5zm3.599 1.5h3.599l-.778-1.166a.75.75 0 0 0-.624-.334h-2.197zm4.25 1.5h-10v6.75c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25z"
-    />
-  </svg>
-</span>
-        </div>
-       <div class="relative w-full">
-
-  <!-- Input -->
-  <input
-    class="w-full pl-9 pr-8 py-[6px]
-           text-[14px] font-[450]
-           border border-[#616161] rounded-[9px]
-           focus:ring-1 focus:ring-[#005bd3] outline-none"
-  />
-
-  <!-- Overlay text -->
-  <div class="absolute inset-y-0 left-0 right-8 flex items-center pl-9 overflow-hidden">
-    <div class="flex items-center gap-1 min-w-0">
-      <span class="text-[.8125rem] font-[450] text-[#303030] truncate">
-        Store default
-      </span>
-      <span class="text-[#303030]">•</span>
-      <span class="text-[.8125rem] font-[450] text-[#616161] truncate">
-        Sample box - 22 × 13.7 × 4.2 cm, 0 kg
-      </span>
-    </div>
+  <div class="flex-1 flex flex-col gap-1.5 min-w-0">
+  <div class="flex items-center gap-1">
+    <label for="package" class="text-[.8125rem] font-[450] text-[#303030]">Package</label>
+    <span class="text-[#868686] text-[13px]">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+        <path d="M8 12a.75.75 0 0 1-.75-.75v-3.5a.75.75 0 0 1 1.5 0v3.5a.75.75 0 0 1-.75.75M7 5a1 1 0 1 1 2 0 1 1 0 0 1-2 0" />
+        <path fill-rule="evenodd" d="M15 8a7 7 0 1 1-14 0 7 7 0 0 1 14 0m-1.5 0a5.5 5.5 0 1 1-11 0 5.5 5.5 0 1 1 11 0" clip-rule="evenodd" />
+      </svg>
+    </span>
   </div>
 
-  <button type="button" class="absolute inset-y-0 right-0 flex items-center pr-3 text-[#616161] cursor-pointer">
+  <div class="relative group">
+    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none z-10">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="w-4 h-4 fill-current text-[#4A4A4A]">
+        <path fill-rule="evenodd" d="M5 7a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zm.5 3.5v-2h3v2z" />
+        <path fill-rule="evenodd" d="M3.315 2.45a2.25 2.25 0 0 1 1.836-.95h5.796c.753 0 1.455.376 1.872 1.002l1.22 1.828c.3.452.461.983.461 1.526v6.894a1.75 1.75 0 0 1-1.75 1.75h-9.5a1.75 1.75 0 0 1-1.75-1.75v-6.863c0-.57.177-1.125.506-1.59l1.309-1.848Zm1.836.55a.75.75 0 0 0-.612.316l-.839 1.184h3.55v-1.5zm3.599 1.5h3.599l-.778-1.166a.75.75 0 0 0-.624-.334h-2.197zm4.25 1.5h-10v6.75c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25z" />
+      </svg>
+    </div>
+
+    <input
+      type="text"
+      id="package"
+      readonly
+      class="w-full pl-9 pr-8 py-[6px] text-[14px] font-[450] border border-[#616161] rounded-[9px] 
+             focus:ring-1 focus:ring-[#303030] outline-none cursor-pointer 
+             group-hover:bg-[#FAFAFA] transition-colors"
+    />
+
+    <div class="absolute inset-y-0 left-0 right-8 flex items-center pl-9 overflow-hidden pointer-events-none">
+      <div class="flex items-center gap-1 min-w-0">
+        <span class="text-[.8125rem] font-[450] text-[#303030] truncate">Store default</span>
+        <span class="text-[#303030]">•</span>
+        <span class="text-[.8125rem] font-[450] text-[#616161] truncate">Sample box - 22 × 13.7 × 4.2 cm, 0 kg</span>
+      </div>
+    </div>
+
+    <div class="absolute inset-y-0 right-0 flex items-center pr-3 text-[#616161] pointer-events-none">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
         <path d="M8.884 2.323a1.25 1.25 0 0 0-1.768 0l-2.646 2.647a.749.749 0 1 0 1.06 1.06l2.47-2.47 2.47 2.47a.749.749 0 1 0 1.06-1.06z" />
         <path d="m11.53 11.03-2.646 2.647a1.25 1.25 0 0 1-1.768 0l-2.646-2.647a.749.749 0 1 1 1.06-1.06l2.47 2.47 2.47-2.47a.749.749 0 1 1 1.06 1.06" />
       </svg>
-    </button>
- 
+    </div>
+  </div>
 </div>
 
+<div class="w-full md:w-[220px] flex flex-col gap-1.5">
+  <label class="text-[.8125rem] font-[450] text-[#303030]">Product weight</label>
+  <div class="flex gap-2">
+    <input 
+      type="number" 
+      value="0.0" 
+      class="w-full py-[6px] px-3 text-[.8125rem] font-[450] border border-[#616161] rounded-[9px] 
+             focus:ring-1 focus:ring-[#005bd3] outline-none hover:bg-[#FAFAFA] transition-colors"
+    >
+    <div class="relative w-20 group">
+      <select class="w-full bg-white border border-[#616161] rounded-[9px] py-[6px] px-2 text-[.8125rem] font-[450] 
+                     appearance-none outline-none focus:ring-1 focus:ring-[#005bd3] cursor-pointer 
+                     group-hover:bg-[#FAFAFA] transition-colors">
+        <option>kg</option>
+        <option>lb</option>
+      </select>
+      <div class="absolute inset-y-0 right-1 flex items-center pointer-events-none text-gray-500">
+        <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+        </svg>
       </div>
     </div>
-
-    <div class="w-full md:w-[220px] flex flex-col gap-1.5">
-      <label class="text-[.8125rem] font-[450] text-[#303030]">Product weight</label>
-      <div class="flex gap-2">
-        <input type="number" value="0.0" class="w-full py-[6px] px-3 text-[.8125rem] font-[450] outline-none  border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3]
-          outline-none">
-        <div class="relative w-20">
-          <select class="w-full bg-white border border-[#616161] rounded-[10px] py-2 px-2  text-[.8125rem] font-[450] appearance-none outline-none focus:ring-1 focus:ring-[#005bd3]">
-            <option>kg</option>
-            <option>lb</option>
-          </select>
-          <div class="absolute inset-y-0 right-1 flex items-center pointer-events-none text-gray-500">
-            <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
-          </div>
-        </div>
-      </div>
-    </div>
+  </div>
+</div>
   </div>
 
   <div class="h-px bg-[#E3E3E3] -mx-4"></div>
@@ -1039,7 +1025,7 @@
 
   </div>
 
-  </label>
+ 
 
 </div>
   </div>

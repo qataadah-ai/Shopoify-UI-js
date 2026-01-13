@@ -28,7 +28,7 @@ document.querySelectorAll(".back-to-main").forEach((btn) => {
   };
 });
 
-// 4. Click Final Item -> Put text in Input and Close
+
 // This targets the <li> items that are NOT the back button
 document.querySelectorAll("ul[id]:not(#main-list) li:not(#back-to-main)").forEach((item) => {
   item.onclick = () => {
@@ -37,11 +37,29 @@ document.querySelectorAll("ul[id]:not(#main-list) li:not(#back-to-main)").forEac
   };
 });
 
+// Price Dropdown
 
-const priceBtn = document.getElementById("Price-btn");
+const priceBtn = document.getElementById("Price-btn-dropdown-icon");
 const priceDropdown = document.getElementById("price-dropdown");
+const priceButtons = document.getElementById("price-buttons");
 
 priceBtn.onclick=()=>{
-    priceBtn.style.rotate = priceDropdown.classList.contains("hidden") ? "0deg" : "180deg";
+    priceBtn.style.rotate = priceDropdown.classList.contains("hidden") ? "180deg" : "0deg";
     priceDropdown.classList.toggle("hidden");
+    priceButtons.classList.toggle("hidden");
 }
+
+// Unit Price Dropdown
+
+const unitInput = document.getElementById("unit-price");
+const unitDropdown = document.getElementById("unit-price-dropdown");
+const CancerBtn = document.getElementById("unit-price-cancel-btn");
+
+unitInput.onclick = () =>{
+    unitDropdown.classList.remove("hidden");
+}
+CancerBtn.onclick = ( )=>{
+  unitDropdown.classList.add("hidden")
+} 
+
+

@@ -472,14 +472,14 @@
 
     <!-- Compare-at price -->
    <div class="space-y-2 relative w-full sm:w-1/2">
-  <label for="Compare-at " class="block text-[0.8125rem] font-[450] text-[#303030]">
+  <label for="Compare-at" class="block text-[0.8125rem] font-[450] text-[#303030]">
     Compare-at price
   </label>
 
   <input 
     type="text" 
-    id="Compare-at " 
-    name="Compare-at " 
+    id="Compare-at" 
+    name="Compare-at" 
     placeholder="0.00 "
     class="w-full relative pl-9 pr-3 text-[.8125rem] font-[450] placeholder:text-[#636363] py-[6px] border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3] outline-none"
   >
@@ -743,16 +743,18 @@
   <div  class="flex flex-wrap items-start justify-between gap-2 relative mt-4">
     
     <div id="Inventory-btns"  class="flex gap-1 items-start justify-between relative min-h-[32px]">
-      <button class="px-2 py-1 text-[13px] text-[#616161] bg-[#F0F0F0] hover:bg-[#EBEBEB] rounded-[8px] font-[450] cursor-pointer">
+      <button id="SKU-btn" class="px-2 py-1 text-[13px] text-[#616161] bg-[#F0F0F0] hover:bg-[#EBEBEB] rounded-[8px] font-[450] cursor-pointer">
         SKU
       </button>
-        <button class="px-2 py-1 text-[13px] text-[#616161] bg-[#F0F0F0] hover:bg-[#EBEBEB] rounded-[8px] font-[450] cursor-pointer">
-        Sell when out of stock  <span class="bg-[#DDDDDD] text-[#616161] px-2 py-0.5 rounded-md text-[.8125rem] font-[450]">Off</span>
-      </button>
-      <button class="px-2 py-1 text-[13px] text-[#616161] bg-[#F0F0F0] hover:bg-[#EBEBEB] rounded-[8px] font-[450] cursor-pointer">
+    
+      <button id="barcode-btn" class="px-2 py-1 text-[13px] text-[#616161] bg-[#F0F0F0] hover:bg-[#EBEBEB] rounded-[8px] font-[450] cursor-pointer">
         Barcode
       </button>
      
+        <button class="px-2 py-1 text-[13px] text-[#616161] bg-[#F0F0F0] hover:bg-[#EBEBEB] rounded-[8px] font-[450] cursor-pointer">
+        Sell when out of stock  <span class="bg-[#DDDDDD] text-[#616161] px-2 py-0.5 rounded-md text-[.8125rem] font-[450]">Off</span>
+      </button>
+
     </div>
 
    <button id="Inventory-dropdrown-btn" class="absolute right-0 top-1 cursor-pointer rounded-md transition-all">
@@ -761,7 +763,7 @@
       </svg>
     </button>
 
-  <!-- Dropdwon for Inventory -->
+  <!-- Dropdown for Inventory -->
 
 <div id="Inventory-dropdrown" class=" flex flex-col gap-4 w-full hidden">
 
@@ -774,15 +776,16 @@
   <!-- Inputs -->
   <div class="flex flex-wrap sm:flex-nowrap gap-4"> 
 
-    <!-- Compare-at price -->
+     <!-- SKU -->
+
    <div class=" flex flex-col w-full space-y-2 w-full ">
-  <label for="SKU " class=" text-[0.8125rem] font-[450] text-[#303030]">
+  <label for="SKU" class=" text-[0.8125rem] font-[450] text-[#303030]">
     SKU (Stock Keeping Unit)
   </label>
 
   <input 
     type="text" 
-    id="SKU " 
+    id="SKU" 
     name="SKU" 
     placeholder="0.00 "
     class="w-full relative pl-3 pr-3 text-[.8125rem] font-[450] placeholder:text-[#636363] py-[6px] border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3] outline-none"
@@ -823,12 +826,9 @@
 
 
 
-
-
-
     </section>
 
-<!-- Fourth -->
+<!-- Fourth Card -->
    <section class="bg-white p-4 rounded-[12px] border border-[#E3E3E3] flex flex-col">
 
   <!-- Upper Version -->
@@ -852,7 +852,7 @@
 
       <div class="flex items-center gap-1">
         <label class="text-[.8125rem] font-[450] text-[#303030]">Package</label>
-        <span class="text-gray-400 text-[13px]">
+        <span class="text-[#868686] text-[13px]">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
             <path d="M8 12a.75.75 0 0 1-.75-.75v-3.5a.75.75 0 0 1 1.5 0v3.5a.75.75 0 0 1-.75.75M7 5a1 1 0 1 1 2 0 1 1 0 0 1-2 0" />
             <path fill-rule="evenodd" d="M15 8a7 7 0 1 1-14 0 7 7 0 0 1 14 0m-1.5 0a5.5 5.5 0 1 1-11 0 5.5 5.5 0 1 1 11 0" clip-rule="evenodd" />
@@ -903,15 +903,13 @@
     </div>
   </div>
 
-  <!-- Chevron -->
-  <div class="absolute inset-y-0 right-2 flex items-center pointer-events-none">
-    <svg class="h-4 w-4 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
-      <path fill-rule="evenodd"
-        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4z"
-        clip-rule="evenodd" />
-    </svg>
-  </div>
-
+  <button type="button" class="absolute inset-y-0 right-0 flex items-center pr-3 text-[#616161] cursor-pointer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+        <path d="M8.884 2.323a1.25 1.25 0 0 0-1.768 0l-2.646 2.647a.749.749 0 1 0 1.06 1.06l2.47-2.47 2.47 2.47a.749.749 0 1 0 1.06-1.06z" />
+        <path d="m11.53 11.03-2.646 2.647a1.25 1.25 0 0 1-1.768 0l-2.646-2.647a.749.749 0 1 1 1.06-1.06l2.47 2.47 2.47-2.47a.749.749 0 1 1 1.06 1.06" />
+      </svg>
+    </button>
+ 
 </div>
 
       </div>
@@ -938,22 +936,114 @@
   <div class="h-px bg-[#E3E3E3] -mx-4"></div>
 
   <!-- BUTTONS -->
-  <div class="mt-4 flex items-center justify-between">
-    <div class="flex flex-wrap gap-2">
-      <button class="px-2 py-1 text-[.8125rem]  text-[#616161] bg-[#F1F1F1] hover:bg-[#EBEBEB] rounded-[8px] font-[500] transition-colors">
-        Country of origin
+ <div  class="flex flex-wrap items-start justify-between gap-2 relative mt-4">
+    
+    <div id="Shipping-btns"  class="flex gap-1 items-start justify-between relative min-h-[32px]">
+      <button id="country-btn" class="px-2 py-1 text-[13px] text-[#616161] bg-[#F0F0F0] hover:bg-[#EBEBEB] rounded-[8px] font-[450] cursor-pointer">
+       Country of origin
       </button>
-      <button class="px-2 py-1 text-[.8125rem] text-[#616161] bg-[#F1F1F1] hover:bg-[#EBEBEB] rounded-[8px] font-[500] transition-colors">
-        HS Code
+    
+      <button id="HS-btn" class="px-2 py-1 text-[13px] text-[#616161] bg-[#F0F0F0] hover:bg-[#EBEBEB] rounded-[8px] font-[450] cursor-pointer">
+        HS code
       </button>
+     
+
     </div>
 
-    <button class="p-1 text-gray-500 hover:bg-gray-100 rounded-md transition-colors">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="w-5 h-5 fill-current">
-        <path d="M3.72 6.47a.75.75 0 0 1 1.06 0l3.47 3.47 3.47-3.47a.749.749 0 1 1 1.06 1.06l-4 4a.75.75 0 0 1-1.06 0l-4-4a.75.75 0 0 1 0-1.06" />
+   <button id="Shipping-dropdrown-btn" class="absolute right-0 top-1 cursor-pointer rounded-md transition-all">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="w-5 h-5 fill-[#616161]">
+        <path fill-rule="evenodd" d="M3.72 6.47a.75.75 0 0 1 1.06 0l3.47 3.47 3.47-3.47a.749.749 0 1 1 1.06 1.06l-4 4a.75.75 0 0 1-1.06 0l-4-4a.75.75 0 0 1 0-1.06" />
+      </svg>
+    </button>
+
+  <!-- Dropdwon for Shipping -->
+
+<div id="Shipping-dropdrown" class=" flex flex-col gap-4 w-full hidden">
+
+  <!-- Header -->
+  
+    <h3 class="text-[12px] font-semibold text-[#000000]">
+    Customs information
+    </h3>
+
+  <!-- Inputs -->
+  <div class="flex flex-col gap-4"> 
+
+
+<div class="flex flex-col space-y-2 w-full">
+  
+   <div class="flex items-center gap-1">
+        <label for="Country-region" class="text-[0.8125rem] font-[450] text-[#303030]">Country/Region of origin</label>
+        <span class="text-[#868686] text-[13px]">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+            <path d="M8 12a.75.75 0 0 1-.75-.75v-3.5a.75.75 0 0 1 1.5 0v3.5a.75.75 0 0 1-.75.75M7 5a1 1 0 1 1 2 0 1 1 0 0 1-2 0" />
+            <path fill-rule="evenodd" d="M15 8a7 7 0 1 1-14 0 7 7 0 0 1 14 0m-1.5 0a5.5 5.5 0 1 1-11 0 5.5 5.5 0 1 1 11 0" clip-rule="evenodd"/>
+          </svg>
+        </span>
+      </div>
+      
+
+  <div class="relative w-full"> 
+ 
+      <select id="Country-region" 
+      class="w-full pl-3 appearance-none pr-10 py-[6px] text-[#303030] text-[.8125rem] font-[450] border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3] outline-none">
+           <option value="" selected disabled hidden >Select</option>
+      
+      <option value="PK">Pakistan</option>
+      <option value="US">United States</option>
+      <option value="UK">United Kingdom</option>
+          </select>
+
+    <button type="button" class="absolute inset-y-0 right-0 flex items-center pr-3 text-[#616161] cursor-pointer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+        <path d="M8.884 2.323a1.25 1.25 0 0 0-1.768 0l-2.646 2.647a.749.749 0 1 0 1.06 1.06l2.47-2.47 2.47 2.47a.749.749 0 1 0 1.06-1.06z" />
+        <path d="m11.53 11.03-2.646 2.647a1.25 1.25 0 0 1-1.768 0l-2.646-2.647a.749.749 0 1 1 1.06-1.06l2.47 2.47 2.47-2.47a.749.749 0 1 1 1.06 1.06" />
       </svg>
     </button>
   </div>
+
+</div>
+
+<div class="flex flex-col space-y-2 w-full">
+
+ <div class="flex items-center gap-1">
+        <label for="HS-code" class="text-[.8125rem] font-[450] text-[#303030]">Harmonized System (HS) code</label>
+        <span class="text-[#868686] text-[13px]">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+            <path d="M8 12a.75.75 0 0 1-.75-.75v-3.5a.75.75 0 0 1 1.5 0v3.5a.75.75 0 0 1-.75.75M7 5a1 1 0 1 1 2 0 1 1 0 0 1-2 0" />
+            <path fill-rule="evenodd" d="M15 8a7 7 0 1 1-14 0 7 7 0 0 1 14 0m-1.5 0a5.5 5.5 0 1 1-11 0 5.5 5.5 0 1 1 11 0" clip-rule="evenodd" />
+          </svg>
+        </span>
+      </div>
+      
+
+  <div class="relative w-full"> 
+    <input
+      type="text"
+      name="country"
+      id="HS-code"
+      placeholder="Enter a 6-digit code or search by keyword"
+      class="w-full pl-3 pr-10 py-[6px] text-[.8125rem] font-[450] border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3] outline-none"
+    />
+    
+    <button type="button" class="absolute inset-y-0 right-0 flex items-center pr-3 text-[#616161] cursor-pointer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+        <path d="M8.884 2.323a1.25 1.25 0 0 0-1.768 0l-2.646 2.647a.749.749 0 1 0 1.06 1.06l2.47-2.47 2.47 2.47a.749.749 0 1 0 1.06-1.06z" />
+        <path d="m11.53 11.03-2.646 2.647a1.25 1.25 0 0 1-1.768 0l-2.646-2.647a.749.749 0 1 1 1.06-1.06l2.47 2.47 2.47-2.47a.749.749 0 1 1 1.06 1.06" />
+      </svg>
+    </button>
+  </div>
+
+</div>
+
+
+  </div>
+
+  </label>
+
+</div>
+  </div>
+
 
    </section>
 

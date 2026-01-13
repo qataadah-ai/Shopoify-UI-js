@@ -740,21 +740,22 @@
 <div class="h-px bg-[#E3E3E3] -mx-4 mt-4"></div>
 
 
-  <div  class="flex items-start justify-between relative mt-4">
+  <div  class="flex flex-wrap items-start justify-between gap-2 relative mt-4">
     
-    <div id="Inventory-btns"  class="flex flex-wrap gap-2">
+    <div id="Inventory-btns"  class="flex gap-1 items-start justify-between relative min-h-[32px]">
       <button class="px-2 py-1 text-[13px] text-[#616161] bg-[#F0F0F0] hover:bg-[#EBEBEB] rounded-[8px] font-[450] cursor-pointer">
         SKU
+      </button>
+        <button class="px-2 py-1 text-[13px] text-[#616161] bg-[#F0F0F0] hover:bg-[#EBEBEB] rounded-[8px] font-[450] cursor-pointer">
+        Sell when out of stock  <span class="bg-[#DDDDDD] text-[#616161] px-2 py-0.5 rounded-md text-[.8125rem] font-[450]">Off</span>
       </button>
       <button class="px-2 py-1 text-[13px] text-[#616161] bg-[#F0F0F0] hover:bg-[#EBEBEB] rounded-[8px] font-[450] cursor-pointer">
         Barcode
       </button>
-      <button class="px-2 py-1 text-[13px] text-[#616161] bg-[#F0F0F0] hover:bg-[#EBEBEB] rounded-[8px] font-[450] cursor-pointer">
-        Sell when out of stock  <span class="bg-[#DDDDDD] text-[#616161] px-2 py-0.5 rounded-md text-[.8125rem] font-[450]">Off</span>
-      </button>
+     
     </div>
 
-   <button id="Inventory-dropdrown-btn" class="absolute right-0 top-0 p-1 cursor-pointer rounded-md transition-all">
+   <button id="Inventory-dropdrown-btn" class="absolute right-0 top-1 cursor-pointer rounded-md transition-all">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="w-5 h-5 fill-[#616161]">
         <path fill-rule="evenodd" d="M3.72 6.47a.75.75 0 0 1 1.06 0l3.47 3.47 3.47-3.47a.749.749 0 1 1 1.06 1.06l-4 4a.75.75 0 0 1-1.06 0l-4-4a.75.75 0 0 1 0-1.06" />
       </svg>

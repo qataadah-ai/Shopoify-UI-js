@@ -946,7 +946,7 @@
     </div>
     
 <!-- Pop UP -->
-<div id="add-package-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-blur-sm">
+<div id="add-package-modal" class=" fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-blur-sm">
     
     <div class="bg-white w-full max-w-[660px] rounded-[16px] shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-200">
         
@@ -999,22 +999,40 @@
             </div>
 
             <!-- tHIRD row -->
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-                <div>
-                    <label class="block text-[12px] text-gray-600 mb-1">Length</label>
-                    <input type="text" class="w-full border border-[#E3E3E3] rounded-lg px-3 py-2 focus:ring-2 focus:ring-black outline-none">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+
+                <div class="flex flex-col gap-1">
+                    <label class="text-[.8125rem] text-[#303030] font-[450]">Length</label>
+                    <input type="number" class="w-full text-[.8125rem] font-[450] placeholder:text-[#636363] py-[6px] px-[12px] border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3] outline-none">
                 </div>
-                <div>
-                    <label class="block text-[12px] text-gray-600 mb-1">Width</label>
-                    <input type="text" class="w-full border border-[#E3E3E3] rounded-lg px-3 py-2 focus:ring-2 focus:ring-black outline-none">
+                <div class="flex flex-col gap-1">
+                    <label class="text-[.8125rem] text-[#303030] font-[450]">Width</label>
+                    <input type="number" class="w-full text-[.8125rem] font-[450] placeholder:text-[#636363] py-[6px] px-[12px] border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3] outline-none">
                 </div>
-                <div>
-                    <label class="block text-[12px] text-gray-600 mb-1">Height</label>
-                    <div class="flex">
-                        <input type="text" class="w-full border border-[#E3E3E3] rounded-l-lg px-3 py-2 outline-none">
-                        <span class="bg-gray-50 border border-l-0 border-[#E3E3E3] rounded-r-lg px-2 flex items-center text-[12px] text-gray-500">cm</span>
-                    </div>
+
+                <div class="flex flex-col gap-1">
+                    <label class="text-[.8125rem] text-[#303030] font-[450]">Height</label>
+                    <input type="number" class="w-full text-[.8125rem] font-[450] placeholder:text-[#636363] py-[6px] px-[12px] border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3] outline-none">
                 </div>
+
+  <div class="relative min-w-16 mt-[22px]">
+
+  <select class="w-full bg-white flex border border-[#616161] rounded-[9px] py-[6px] pl-2 pr-6 text-[.8125rem] font-[450] 
+                 appearance-none outline-none focus:border-[#005bd3] focus:ring-1 focus:ring-[#005bd3] cursor-pointer 
+                 hover:bg-[#FAFAFA] transition-colors">
+    <option value="cm">cm</option>
+    <option value="in">in</option>
+  </select>
+
+  <div class="absolute inset-y-0 right-3 bottom-[8px] flex items-center pointer-events-none text-[#616161]">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-3.5 h-3.5">
+      <path d="M8.884 2.323a1.25 1.25 0 0 0-1.768 0l-2.646 2.647a.749.749 0 1 0 1.06 1.06l2.47-2.47 2.47 2.47a.749.749 0 1 0 1.06-1.06z" />
+      <path d="m11.53 11.03-2.646 2.647a1.25 1.25 0 0 1-1.768 0l-2.646-2.647a.749.749 0 1 1 1.06-1.06l2.47 2.47 2.47-2.47a.749.749 0 1 1 1.06 1.06" />
+    </svg>
+  </div>
+</div>    
+    
+                
                 <div>
                     <label class="block text-[12px] text-gray-600 mb-1">Weight (empty)</label>
                     <div class="flex">

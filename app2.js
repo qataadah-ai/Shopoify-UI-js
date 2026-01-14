@@ -161,7 +161,6 @@ HSInput.focus();
 const PackaginInput =  document.getElementById("package");
 const packageSubmenu = document.getElementById("package-submenu");
 
-
 PackaginInput.onclick = () =>{
   packageSubmenu.classList.toggle("hidden");
 }
@@ -170,7 +169,7 @@ PackaginInput.onclick = () =>{
 
 const titleEl = document.getElementById("package-title");
 const descEl = document.getElementById("package-desc");
-const separatorEl = document.getElementById("package-separator");
+
 
 const options = document.querySelectorAll(".package-option");
 
@@ -178,22 +177,26 @@ const options = document.querySelectorAll(".package-option");
 
 // select option
 options.forEach(option => {
-  option.addEventListener("click", () => {
+  option.onclick = () => {
+
+    options.forEach(opt => opt.classList.remove("bg-[#F1F1F1]"));
+
+    // 2. ADD ACTIVE STATE TO CLICKED ITEM
+  
+    option.classList.add("bg-[#F1F1F1]");
+    
     const title = option.dataset.title;
     const desc = option.dataset.desc;
 
     // REPLACE content (not append)
     titleEl.textContent = title;
-
-    if (desc) {
-      descEl.textContent = desc;
-      separatorEl.classList.remove("hidden");
-    } else {
-      descEl.textContent = "";
-      separatorEl.classList.add("hidden");
-    }
+if(desc){
+  descEl.textContent = desc
+}else{
+  descEl.textContent = "";
+}
 
     packageSubmenu.classList.add("hidden");
-  });
+  };
 });
 

@@ -157,3 +157,8 @@ HSInput.focus();
 
 
 
+const PackaginInput =  document.getElementById("package");
+const packageSubmenu = document.getElementById("package-submenu");
+PackaginInput.onclick = () =>{
+  packageSubmenu.classList.toggle("hidden");
+}

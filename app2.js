@@ -200,3 +200,15 @@ if(desc){
   };
 });
 
+
+const addPackageModal = document.getElementById("add-package-modal");
+
+ const AddNewPackage = document.querySelector(".Add-new-package").onclick = () => {
+  addPackageModal.classList.remove("hidden");
+}
+
+document.querySelectorAll(".cancel-pop-btn").forEach((btn) => {
+  btn.onclick = () => {
+    addPackageModal.classList.add("hidden");
+  }});
+

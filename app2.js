@@ -156,9 +156,44 @@ HSInput.focus();
 }
 
 
+// Packaging dropdown
 
 const PackaginInput =  document.getElementById("package");
 const packageSubmenu = document.getElementById("package-submenu");
+
+
 PackaginInput.onclick = () =>{
   packageSubmenu.classList.toggle("hidden");
 }
+
+
+
+const titleEl = document.getElementById("package-title");
+const descEl = document.getElementById("package-desc");
+const separatorEl = document.getElementById("package-separator");
+
+const options = document.querySelectorAll(".package-option");
+
+
+
+// select option
+options.forEach(option => {
+  option.addEventListener("click", () => {
+    const title = option.dataset.title;
+    const desc = option.dataset.desc;
+
+    // REPLACE content (not append)
+    titleEl.textContent = title;
+
+    if (desc) {
+      descEl.textContent = desc;
+      separatorEl.classList.remove("hidden");
+    } else {
+      descEl.textContent = "";
+      separatorEl.classList.add("hidden");
+    }
+
+    packageSubmenu.classList.add("hidden");
+  });
+});
+

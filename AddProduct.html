@@ -1326,22 +1326,22 @@ Purchase options
 
 <!-- Main card -->
  
-<div class=" border border-[#E3E3E3] rounded-[10px] bg-[#FDFDFD] ">
+<div class="purchase-option-main-card hidden  border border-[#E3E3E3] rounded-[10px] bg-[#FDFDFD]  ">
 
  <!-- PrePaid -->
-  <div class="p-4 border-b border-[#E3E3E3]">
+  <div data-option="prepaid-card" class="hidden p-4 border-b border-[#E3E3E3]">
     <div class="flex flex-col gap-2">
 
-<div class="flex justify-between">
+<div  class="flex justify-between">
       <div class="flex items-center gap-2  rounded-[10px] cursor-pointer">
       <img class="w-5 h-5 rounded-md" src="https://cdn.shopify.com/s/files/applications/071e9d6cd4a1d56acf60bc21aea1e689_48x.png?1675267593" alt="">
-      <span class="text-[13px] font-[600] text-[#303030] ">Preorder</span>
+      <span class="text-[13px] font-[600] text-[#303030] ">Prepaid</span>
      </div>
 
      <button 
   type="button" 
   aria-label="Remove"
-  class="flex items-center justify-center w-8 h-8 rounded-md text-[#616161] hover:bg-[#F1F1F1] active:bg-[#EBEBEB] transition-colors duration-200"
+  class="purchase-cross-btn flex items-center justify-center w-8 h-8 rounded-md text-[#616161] hover:bg-[#F1F1F1] active:bg-[#EBEBEB] transition-colors duration-200"
 >
   <svg 
     xmlns="http://www.w3.org/2000/svg" 
@@ -1358,7 +1358,7 @@ Purchase options
 </div>
 
  <!-- PreOrder -->
-  <div class="p-4 border-b border-[#E3E3E3]">
+  <div data-option="preorder-card" class="hidden p-4 border-b border-[#E3E3E3]">
     <div class="flex flex-col gap-2">
 
 <div class="flex justify-between">
@@ -1370,7 +1370,7 @@ Purchase options
      <button 
   type="button" 
   aria-label="Remove"
-  class="flex items-center justify-center w-8 h-8 rounded-md text-[#616161] hover:bg-[#F1F1F1] active:bg-[#EBEBEB] transition-colors duration-200"
+  class="purchase-cross-btn flex items-center justify-center w-8 h-8 rounded-md text-[#616161] hover:bg-[#F1F1F1] active:bg-[#EBEBEB] transition-colors duration-200"
 >
   <svg 
     xmlns="http://www.w3.org/2000/svg" 
@@ -1388,7 +1388,7 @@ Purchase options
 
 <!-- Try Before You Buy -->
 
-  <div class="p-4 border-b border-[#E3E3E3]">
+  <div  data-option="try-before-you-buy-card" class="hidden p-4 border-b border-[#E3E3E3]">
     <div class="flex flex-col gap-2">
 
 <div class="flex justify-between">
@@ -1400,7 +1400,7 @@ Purchase options
      <button 
   type="button" 
   aria-label="Remove"
-  class="flex items-center justify-center w-8 h-8 rounded-md text-[#616161] hover:bg-[#F1F1F1] active:bg-[#EBEBEB] transition-colors duration-200"
+  class="purchase-cross-btn flex items-center justify-center w-8 h-8 rounded-md text-[#616161] hover:bg-[#F1F1F1] active:bg-[#EBEBEB] transition-colors duration-200"
 >
   <svg 
     xmlns="http://www.w3.org/2000/svg" 
@@ -1418,7 +1418,7 @@ Purchase options
 
 <!-- Subscription -->
 
- <div class="p-4 border-b border-[#E3E3E3]">
+ <div data-option="subscription-card" class="hidden p-4 border-b border-[#E3E3E3]">
     <div class="flex flex-col gap-2">
 
 <div class="flex justify-between">
@@ -1430,7 +1430,7 @@ Purchase options
      <button 
   type="button" 
   aria-label="Remove"
-  class="flex items-center justify-center w-8 h-8 rounded-md text-[#616161] hover:bg-[#F1F1F1] active:bg-[#EBEBEB] transition-colors duration-200"
+  class="purchase-cross-btn flex items-center justify-center w-8 h-8 rounded-md text-[#616161] hover:bg-[#F1F1F1] active:bg-[#EBEBEB] transition-colors duration-200"
 >
   <svg 
     xmlns="http://www.w3.org/2000/svg" 
@@ -1447,7 +1447,7 @@ Purchase options
 </div>
 
 
-
+<!-- 
    <div  class="flex hover:bg-[#F2F2F2]  items-center px-3 py-2">
 
 
@@ -1460,9 +1460,10 @@ Purchase options
   </svg>
 </span>
 
-  <p id="purchase-option-btn" class="text-[12px] font-[550] text-[#303030]">Subscriptions,preorders,try before you buy,and more</p>
+  <p id="purchase-option-inside-btn" class="text-[12px] font-[550] text-[#303030]">Subscriptions,preorders,try before you buy,and more</p>
 
-  </div>
+  </div> -->
+
 
 </div>
 
@@ -1493,22 +1494,22 @@ Purchase options
 
   <div class="p-1 flex flex-col gap-1" >
     
-     <div class="flex items-center gap-2 py-1 px-[6px] hover:bg-[#F1F1F1] rounded-[10px] cursor-pointer">
+     <div data-option="prepaid" class="flex items-center gap-2 py-1 px-[6px] hover:bg-[#F1F1F1] rounded-[10px] cursor-pointer">
       <img class="w-5 h-5 rounded-md" src="https://cdn.shopify.com/s/files/applications/071e9d6cd4a1d56acf60bc21aea1e689_48x.png?1675267593" alt="">
       <span class="text-[13px] font-[450] text-[#303030] ">Prepaid</span>
      </div>
     
-     <div class="flex items-center gap-2 py-1 px-[6px] hover:bg-[#F1F1F1] rounded-[10px] cursor-pointer">
+     <div data-option="preorder" class="flex items-center gap-2 py-1 px-[6px] hover:bg-[#F1F1F1] rounded-[10px] cursor-pointer">
       <img class="w-5 h-5 rounded-md" src="https://cdn.shopify.com/s/files/applications/071e9d6cd4a1d56acf60bc21aea1e689_48x.png?1675267593" alt="">
       <span class="text-[13px] font-[450] text-[#303030] ">Preorder</span>
      </div>
     
-     <div class="flex items-center gap-2 py-1 px-[6px] hover:bg-[#F1F1F1] rounded-[10px] cursor-pointer">
+     <div data-option="try-before-you-buy" class="flex items-center gap-2 py-1 px-[6px] hover:bg-[#F1F1F1] rounded-[10px] cursor-pointer">
       <img class="w-5 h-5 rounded-md" src="https://cdn.shopify.com/s/files/applications/071e9d6cd4a1d56acf60bc21aea1e689_48x.png?1675267593" alt="">
       <span class="text-[13px] font-[450] text-[#303030] ">Try Before You Buy</span>
      </div>
     
-     <div class="flex items-center gap-2 py-1 px-[6px] hover:bg-[#F1F1F1] rounded-[10px] cursor-pointer">
+     <div data-option="subscription" class="flex items-center gap-2 py-1 px-[6px] hover:bg-[#F1F1F1] rounded-[10px] cursor-pointer">
       <img class="w-5 h-5 rounded-md" src="https://cdn.shopify.com/s/files/applications/071e9d6cd4a1d56acf60bc21aea1e689_48x.png?1675267593" alt="">
       <span class="text-[13px] font-[450] text-[#303030] ">Subscription</span>
      </div>

@@ -248,20 +248,15 @@ function updateBtnText() {
         : "Add options like size or colors";
 }
 
+
 // Purchase Option Dropdown 
 
 const  purchaseOptionDropdown = document.querySelector('.purchase-option-dropdown');
+
 const purchaseOptionBtn = document.getElementById("purchase-option-btn"); 
 const purchaseOptionMainCard = document.querySelector('.purchase-option-main-card');
 
-const purchaseCrossBtn = document.querySelectorAll('.purchase-cross-btn').forEach(btn => {
-   
-  btn.onclick = () => {
-  
-    card.classList.add("hidden");
-    
-  }
-});
+
 
 purchaseOptionBtn.onclick = () => {
   purchaseOptionDropdown.classList.toggle("hidden");
@@ -274,16 +269,18 @@ purchaseOptions.forEach((item) =>{
 
   item.onclick = () => {
 
-    purchaseOptionDropdown.classList.add("hidden");
-    purchaseOptionMainCard.classList.remove("hidden");
-    
   let  option = item.getAttribute("data-option");
 
   let card = document.querySelector(
     `[data-option="${option}-card"]`
   )
 if(card){
+  
   card.classList.remove("hidden");
+  
+    purchaseOptionDropdown.classList.add("hidden");
+    purchaseOptionMainCard.classList.remove("hidden");
+    
 }
   }
 
@@ -291,8 +288,17 @@ if(card){
 })
 
 document.querySelectorAll('.purchase-cross-btn').forEach(btn => {
+
   btn.onclick = () => {
+  
     const card = btn.closest('[data-option$="-card"]');
-    if(card) card.classList.add('hidden');  // hide the card
+    if(card) card.classList.add('hidden');
+
+    const anyVisible = document.querySelector('[data-option$="-card"]:not(.hidden)');
+    if(!anyVisible){
+
+      purchaseOptionMainCard.classList.add('hidden');
+    }
   }
+
 })

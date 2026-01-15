@@ -42,6 +42,8 @@ const priceBtn = document.getElementById("Price-btn-dropdown-icon");
 const priceDropdown = document.getElementById("price-dropdown");
 const priceButtons = document.getElementById("price-buttons");
 
+
+
 priceBtn.onclick=()=>{
     priceBtn.style.rotate = priceDropdown.classList.contains("hidden") ? "180deg" : "0deg";
     priceDropdown.classList.toggle("hidden");
@@ -212,3 +214,36 @@ document.querySelectorAll(".cancel-pop-btn").forEach((btn) => {
     addPackageModal.classList.add("hidden");
   }});
 
+// Variant Adding Functionality
+
+const addBtn = document.getElementById('Variant-adding');
+const btnText = document.getElementById('Add-Btn-Text');
+const container = document.getElementById('Variant-Container');
+const template = document.getElementById('Variant-Template');
+
+addBtn.onclick = () => {
+    // 1. Clone the HTML from the template
+    const clone = template.content.cloneNode(true);
+
+    const newVariant = clone.querySelector('.Variant-Instance');
+
+const optionInput = clone.querySelector('#option-size'); 
+
+    clone.querySelector('.Delete-Btn').onclick = () => {
+        newVariant.remove();
+        updateBtnText();
+    };
+
+  
+
+    container.appendChild(clone);
+    updateBtnText();
+            optionInput.focus();
+
+};
+
+function updateBtnText() {
+    btnText.innerText = container.children.length > 0 
+        ? "Add another option" 
+        : "Add options like size or colors";
+}

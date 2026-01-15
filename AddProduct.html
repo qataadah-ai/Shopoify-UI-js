@@ -1014,23 +1014,24 @@
                     <label class="text-[.8125rem] text-[#303030] font-[450]">Height</label>
                     <input type="number" class="w-full text-[.8125rem] font-[450] placeholder:text-[#636363] py-[6px] px-[12px] border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3] outline-none">
                 </div>
+<div class="relative w-full"> 
+ 
+      <select id="Country-region" 
+      class="w-full pl-3 appearance-none pr-10 py-[6px] text-[#303030] text-[.8125rem] font-[450] border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3] outline-none">
+          
+      
+      <option value="PK">CM</option>
+      <option value="US">IN</option>
+      <option value="UK">IN</option>
+          </select>
 
-  <div class="relative min-w-16 mt-[22px]">
-
-  <select class="w-full bg-white flex border border-[#616161] rounded-[9px] py-[6px] pl-2 pr-6 text-[.8125rem] font-[450] 
-                 appearance-none outline-none focus:border-[#005bd3] focus:ring-1 focus:ring-[#005bd3] cursor-pointer 
-                 hover:bg-[#FAFAFA] transition-colors">
-    <option value="cm">cm</option>
-    <option value="in">in</option>
-  </select>
-
-  <div class="absolute inset-y-0 right-3 bottom-[8px] flex items-center pointer-events-none text-[#616161]">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-3.5 h-3.5">
-      <path d="M8.884 2.323a1.25 1.25 0 0 0-1.768 0l-2.646 2.647a.749.749 0 1 0 1.06 1.06l2.47-2.47 2.47 2.47a.749.749 0 1 0 1.06-1.06z" />
-      <path d="m11.53 11.03-2.646 2.647a1.25 1.25 0 0 1-1.768 0l-2.646-2.647a.749.749 0 1 1 1.06-1.06l2.47 2.47 2.47-2.47a.749.749 0 1 1 1.06 1.06" />
-    </svg>
+    <button type="button" class="absolute inset-y-0 right-0 flex items-center pr-3 text-[#616161] cursor-pointer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+        <path d="M8.884 2.323a1.25 1.25 0 0 0-1.768 0l-2.646 2.647a.749.749 0 1 0 1.06 1.06l2.47-2.47 2.47 2.47a.749.749 0 1 0 1.06-1.06z" />
+        <path d="m11.53 11.03-2.646 2.647a1.25 1.25 0 0 1-1.768 0l-2.646-2.647a.749.749 0 1 1 1.06-1.06l2.47 2.47 2.47-2.47a.749.749 0 1 1 1.06 1.06" />
+      </svg>
+    </button>
   </div>
-</div>    
     
                 
                 <div>
@@ -1208,21 +1209,109 @@ Variants
 </h2>
 </div>
 
-<div class="pt-[8px]">
+<!-- Variant -->
 
-  <div class="flex hover:bg-[#F2F2F2] w-fit items-center  rounded-[8px] pr-[12px] py-[6px]  pl-[6px] cursor-pointer -ml-1.5">
+<div class="">
+  
+    <div id="Variant-Container" class="space-y-4"></div>
 
-<span aria-hidden="true" class="w-5 h-5 items-center justify-center mt-0.5">
+    <div class="pt-[8px]">
+        <div id="Variant-adding" class="flex hover:bg-[#F2F2F2] w-fit items-center rounded-[8px] pr-[12px] py-[6px] pl-[6px] cursor-pointer -ml-1.5">
+            <span aria-hidden="true" class="w-5 h-5 flex items-center justify-center mt-0.5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 fill-current text-[#4A4A4A]" viewBox="0 0 16 16">
+                    <path d="M4.25 8a.75.75 0 0 1 .75-.75h2.25v-2.25a.75.75 0 0 1 1.5 0v2.25h2.25a.75.75 0 0 1 0 1.5h-2.25v2.25a.75.75 0 0 1-1.5 0v-2.25h-2.25a.75.75 0 0 1-.75-.75"></path>
+                    <path fill-rule="evenodd" d="M8 15a7 7 0 1 0 0-14 7 7 0 0 0 0 14m0-1.5a5.5 5.5 0 1 0 0-11 5.5 5.5 0 1 0 0 11"></path>
+                </svg>
+            </span>
+            <p id="Add-Btn-Text" class="text-[12px] font-[550] text-[#303030] ml-1">Add options like size or colors</p>
+        </div>
+    </div>
+</div>
 
-  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 fill-current text-[#4A4A4A]" viewBox="0 0 16 16">
-    <path d="M4.25 8a.75.75 0 0 1 .75-.75h2.25v-2.25a.75.75 0 0 1 1.5 0v2.25h2.25a.75.75 0 0 1 0 1.5h-2.25v2.25a.75.75 0 0 1-1.5 0v-2.25h-2.25a.75.75 0 0 1-.75-.75">
-    </path>
-    <path fill-rule="evenodd" d="M8 15a7 7 0 1 0 0-14 7 7 0 0 0 0 14m0-1.5a5.5 5.5 0 1 0 0-11 5.5 5.5 0 1 0 0 11"></path>
+<template id="Variant-Template">
+
+    <div class="Variant-Instance flex  border border-[#E3E3E3] rounded-[10px] bg-white  relative group">
+
+      <div class="mt-10 p-1  ">
+        <button 
+  type="button" 
+  class="flex items-center justify-center p-1 text-[#ADADAD] hover:bg-gray-100 rounded cursor-grab active:cursor-grabbing disabled:opacity-50 disabled:cursor-not-allowed"
+  aria-label="Sortable drag handle"
+>
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    viewBox="0 0 16 16" 
+    class="w-5 h-5 fill-current"
+  >
+    <path d="M5.5 2.5a1 1 0 0 0-1 1v.5a1 1 0 0 0 1 1h.5a1 1 0 0 0 1-1v-.5a1 1 0 0 0-1-1z"></path>
+    <path d="M5.5 6.75a1 1 0 0 0-1 1v.5a1 1 0 0 0 1 1h.5a1 1 0 0 0 1-1v-.5a1 1 0 0 0-1-1z"></path>
+    <path d="M4.5 12a1 1 0 0 1 1-1h.5a1 1 0 0 1 1 1v.5a1 1 0 0 1-1 1h-.5a1 1 0 0 1-1-1z"></path>
+    <path d="M10 2.5a1 1 0 0 0-1 1v.5a1 1 0 0 0 1 1h.5a1 1 0 0 0 1-1v-.5a1 1 0 0 0-1-1z"></path>
+    <path d="M9 7.75a1 1 0 0 1 1-1h.5a1 1 0 0 1 1 1v.5a1 1 0 0 1-1 1h-.5a1 1 0 0 1-1-1z"></path>
+    <path d="M10 11a1 1 0 0 0-1 1v.5a1 1 0 0 0 1 1h.5a1 1 0 0 0 1-1v-.5a1 1 0 0 0-1-1z"></path>
   </svg>
-</span>
-  <p class="text-[12px] font-[550] text-[#303030]">Add options like size or colors</p>
+</button>
 </div>
+
+        <div class="w-full flex flex-col p-4 space-y-2">
+           
+   <div class="flex-col flex gap-2"> 
+    <label for="option-size" class="text-[#303030] text-[.8125rem] font-[500] ">
+      Option Values
+     </label>
+
+ 
+      <input 
+        type="text" 
+        id="option-size" 
+         placeholder="Size"
+        class="w-full 
+        px-3 text-[13px] font-[450] 
+        placeholder:text-[#636363] py-[6px]
+         border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3]
+          outline-none "
+      >
+
+    <p class="required-style hidden text-red-800 text-[12px] flex items-center gap-1">
+                    <span class="border border-red-800 rounded-full w-3.5 h-3.5 flex items-center justify-center text-[10px] font-bold">!</span> 
+                    Option name is required.
+                </p>
 </div>
+   <div class="flex-col flex gap-2"> 
+    <label for="option-name" class="text-[#303030] text-[.8125rem] font-[500] ">
+   Option name
+    </label>
+
+ 
+      <input 
+        type="text" 
+        id="option-name" 
+        placeholder="Medium"
+        class="w-full  
+        
+        px-3 text-[13px] font-[450] 
+        placeholder:text-[#636363] py-[6px]
+         border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3]
+          outline-none "
+      >
+
+    
+</div>
+        
+            <div class="Delete-Btn flex justify-between items-center ">
+                <button class="rounded-[8px] bg-[#FFFFFF] flex justify-between text-[#8E0B21] text-[.8125rem] font-[550] px-3 py-[6px] cursor-pointer shadow-[inset_0_0_0_.5px_#D3D3D3,inset_0_-.5px_0_.5px_#B5B5B5] active:translate-y-[0.0625rem] inline-flex items-center">Delete</button>
+                        <button class="Done-Btn rounded-[8px] bg-[#303030] text-white px-3 py-[6px] text-[0.75rem] font-semibold  cursor-pointer shadow-[0_-0.0625rem_0_0.0625rem_rgba(0,0,0,0.8)_inset,0_0_0_0.0625rem_rgba(48,48,48,1)_inset,0_0.03125rem_0_0.09375rem_rgba(255,255,255,0.25)_inset] hover:bg-[#1a1a1a] active:translate-y-[0.0625rem] inline-flex items-center justify-center">
+Done</button>
+            </div>
+        </div>
+
+
+    </div>
+
+
+  </template>
+  
+
     </section>
 
 <!-- Sixth Card -->
@@ -1380,8 +1469,8 @@ Publishing
 <div class="flex flex-col gap-1">
   <a href="#" >
    
- <button class="rounded-[8px]  flex justify-between text-[#303030] bg-[#EBEBEB]  text-[.8125rem] font-[450] py-1 px-2 cursor-pointer inline-flex items-center "> Online store
-   <span  class="inline-flex items-center justify-center w-7 h-7 rounded-[6px] cursor-pointer hover:bg-[#F1F1F1] transition-colors group">
+ <button class="rounded-[8px]  flex justify-between text-[#303030] hover:bg-[#EBEBEB] bg-[#F0F0F0]  text-[.8125rem] font-[450] py-1 px-2 cursor-pointer inline-flex items-center "> Online store
+   <span  class="inline-flex items-center justify-center w-6 h-6 rounded-[6px] cursor-pointer hover:bg-[#F1F1F1] transition-colors group">
     <svg 
       xmlns="http://www.w3.org/2000/svg" 
       viewBox="0 0 16 16" 
@@ -1399,7 +1488,7 @@ Publishing
    <a href="#" >
    
     
- <button class="rounded-[8px]  flex justify-between text-[#786E32] bg-[#FFEBD5]  text-[15px] font-[450] py-1 px-2 cursor-pointer inline-flex items-center ">
+ <button class="rounded-[8px]  flex justify-between text-[#786E32] bg-[#FFF1E3] hover:bg-[#FFEBD5]  text-[15px] font-[450] py-1 px-2 cursor-pointer inline-flex items-center ">
   <!-- Alert Icon -->
 
 <span class="inline-flex items-center justify-center pr-2 ">

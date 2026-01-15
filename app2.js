@@ -247,3 +247,10 @@ function updateBtnText() {
         ? "Add another option" 
         : "Add options like size or colors";
 }
+
+const  purchaseOptionDropdown = document.querySelector('.purchase-option-dropdown');
+const purchaseOptionBtn = document.getElementById("purchase-option-btn"); 
+
+purchaseOptionBtn.onclick = () => {
+  purchaseOptionDropdown.classList.toggle("hidden");
+}

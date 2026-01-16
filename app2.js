@@ -302,3 +302,14 @@ document.querySelectorAll('.purchase-cross-btn').forEach(btn => {
   }
 
 })
+
+
+const Editbtn = document.getElementById("edit-btn")
+const EditDropdown =  document.getElementById("edit-dropdown")
+const editSecLine=  document.getElementById("edit-sec-line")
+
+Editbtn.onclick = () =>{
+  editSecLine.classList.toggle("hidden")
+  EditDropdown.classList.toggle("hidden")
+
+}

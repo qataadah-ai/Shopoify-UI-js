@@ -27,13 +27,15 @@ document.querySelectorAll(".back-to-main").forEach((btn) => {
 });
 
 
-// This targets the <li> items that are NOT the back button
-document.querySelectorAll("ul[id]:not(#main-list) li:not(#back-to-main)").forEach((item) => {
-  item.onclick = () => {
-    input.value = item.innerText;
-    dropdown.classList.add("hidden");
-  };
-});
+document
+  .querySelectorAll("ul:not(#main-list) li:not(.back-to-main)")
+  .forEach((item) => {
+    item.onclick = () => {
+      input.value = item.textContent.trim();
+      dropdown.classList.add("hidden");
+    };
+  });
+
 
 
 // Price Dropdown 
@@ -313,3 +315,5 @@ Editbtn.onclick = () =>{
   EditDropdown.classList.toggle("hidden")
 
 }
+
+

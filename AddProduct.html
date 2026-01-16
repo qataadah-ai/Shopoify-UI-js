@@ -946,140 +946,103 @@
     </div>
     
 <!-- Pop UP -->
-<div id="add-package-modal" class=" fixed inset-0 z-[100] flex items-center justify-center bg-black/50 ">
+<div id="add-package-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 p-4">
+  
+  <div class="bg-white w-full max-w-[660px] max-h-[90vh] rounded-[16px] shadow-2xl overflow-hidden flex flex-col animate-in fade-in zoom-in duration-200">
     
-    <div class="bg-white w-full max-w-[660px] rounded-[16px] shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-200">
-        
-      <!-- Upper area -->
-        <div class="flex items-center bg-[#F3F3F3] justify-between p-4 border-b border-[#E3E3E3]">
-            <h2 class="text-[.875rem] font-semibold text-[#303030]">Add package</h2>
-           <button 
-  type="button" 
-  aria-label="Close"
-  class="flex items-center justify-center p-1 text-[#616161] hover:bg-[#F1F1F1] active:bg-[#E3E3E3] rounded-md transition-colors duration-200 cursor-pointer"
->
-  <span class= "cancel-pop-btn  w-5 h-5 flex items-center justify-center">
-    <svg 
-      xmlns="http://www.w3.org/2000/svg" 
-      viewBox="0 0 16 16" 
-      fill="currentColor" 
-      class="w-4 h-4"
-    >
-      <path d="M11.97 13.03a.749.749 0 1 0 1.06-1.06l-3.97-3.97 3.97-3.97a.749.749 0 1 0-1.06-1.06l-3.97 3.97-3.97-3.97a.749.749 0 1 0-1.06 1.06l3.97 3.97-3.97 3.97a.749.749 0 1 0 1.06 1.06l3.97-3.97z"></path>
-    </svg>
-  </span>
-</button>
-        </div>
-
-     
-
-        <div class="p-4 space-y-5">
-
-             <!-- Second Row -->
-            <div>
-                <label class="block text-[13px] font-semibold text-[#303030] mb-3">Package type</label>
-                <div class="grid grid-cols-3  gap-3">
-
-                    <button class="flex items-center gap-2 p-3 border border-[#E3E3E3] cursor-pointer active-bg-[#F7F7F7] hover:border-[#303030] rounded-lg text-[.8125rem] text-[#303030] font-[450]">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="w-4 h-4 fill-current text-[#4A4A4A]">
-        <path fill-rule="evenodd" d="M5 7a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zm.5 3.5v-2h3v2z" />
-        <path fill-rule="evenodd" d="M3.315 2.45a2.25 2.25 0 0 1 1.836-.95h5.796c.753 0 1.455.376 1.872 1.002l1.22 1.828c.3.452.461.983.461 1.526v6.894a1.75 1.75 0 0 1-1.75 1.75h-9.5a1.75 1.75 0 0 1-1.75-1.75v-6.863c0-.57.177-1.125.506-1.59l1.309-1.848Zm1.836.55a.75.75 0 0 0-.612.316l-.839 1.184h3.55v-1.5zm3.599 1.5h3.599l-.778-1.166a.75.75 0 0 0-.624-.334h-2.197zm4.25 1.5h-10v6.75c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25z" />
-      </svg>
-                        Box
-                    </button>
-                    <button class="flex items-center gap-2 p-3 border border-[#E3E3E3] cursor-pointer active-bg-[#F7F7F7] hover:border-[#303030] rounded-lg text-[.8125rem] text-[#303030] font-[450]">
-                       <svg  class="w-4 h-4 fill-current text-[#4A4A4A]"
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M3.75 2.5a2.75 2.75 0 0 0-2.75 2.75v5.5a2.75 2.75 0 0 0 2.75 2.75h8.5a2.75 2.75 0 0 0 2.75-2.75v-5.5a2.75 2.75 0 0 0-2.75-2.75zm-1.25 2.75c0-.69.56-1.25 1.25-1.25h8.5c.69 0 1.25.56 1.25 1.25v5.5c0 .69-.56 1.25-1.25 1.25h-8.5c-.69 0-1.25-.56-1.25-1.25zm2.067.32a.75.75 0 0 0-.634 1.36l3.538 1.651c.335.156.723.156 1.058 0l3.538-1.651a.75.75 0 0 0-.634-1.36l-3.433 1.602z"></path></svg>
-                        Envelope
-                    </button>
-                    <button class="flex items-center gap-2 p-3 border border-[#E3E3E3] cursor-pointer active-bg-[#F7F7F7] hover:border-[#303030] rounded-lg text-[.8125rem] text-[#303030] font-[450]">
-                    <svg class="w-4 h-4 fill-current text-[#4A4A4A]"
-                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 7.5a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5z"></path><path d="M3.25 10.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1-.75-.75"></path><path fill-rule="evenodd" d="M3.25 2a2.75 2.75 0 0 0-2.75 2.75v6.5a2.75 2.75 0 0 0 2.75 2.75h9.5a2.75 2.75 0 0 0 2.75-2.75v-6.5a2.75 2.75 0 0 0-2.75-2.75zm7.184 1.5h-7.184c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h7.184l-.5-.273a2.75 2.75 0 0 1-1.434-2.414v-3.626c0-1.006.55-1.932 1.433-2.414zm3.566 7.552v-6.104a1 1 0 0 0-1.479-.878l-1.87 1.02a1.25 1.25 0 0 0-.651 1.097v3.626c0 .457.25.878.651 1.097l1.87 1.02a1 1 0 0 0 1.479-.878"></path></svg>
-                        Soft package
-                    </button>
-                </div>
-            </div>
-
-            <!-- tHIRD row -->
-
- <div class=" flex  justify-between gap-6">
-
-  <!-- LENGTH, WIDTH HEIGHT -->
-  <div class="flex gap-2 items-end">
-
-                <div class="flex flex-col gap-1">
-                    <label class="text-[.8125rem] text-[#303030] font-[450]">Length</label>
-                    <input type="number" class="w-full text-[.8125rem] font-[450] placeholder:text-[#636363] py-[6px] px-[12px] border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3] outline-none">
-                </div>
-                <div class="flex flex-col gap-1">
-                    <label class="text-[.8125rem] text-[#303030] font-[450]">Width</label>
-                    <input type="number" class="w-full text-[.8125rem] font-[450] placeholder:text-[#636363] py-[6px] px-[12px] border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3] outline-none">
-                </div>
-
-                <div class="flex flex-col gap-1">
-                    <label class="text-[.8125rem] text-[#303030] font-[450]">Height</label>
-                    <input type="number" class="w-full text-[.8125rem] font-[450] placeholder:text-[#636363] py-[6px] px-[12px] border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3] outline-none">
-                </div>
-
-  
-       <select class="w-[60px] bg-white border border-[#616161] rounded-[9px] py-[8px] px-2 text-[.8125rem] font-[450] 
-                    outline-none focus:ring-1 focus:ring-[#005bd3] cursor-pointer 
-                     group-hover:bg-[#FAFAFA] transition-colors">
-        <option>cm</option>
-        <option>in</option>
-      </select>
-    
-  </div>
-
-<!-- WEIGHT -->
-  <div class="flex gap-1 items-end">
-
-                <div class="flex flex-col gap-1">
-                    <label class="text-[.8125rem] text-[#303030] font-[450]">Weight(empty)</label>
-                    <input type="number" class="w-full text-[.8125rem] font-[450] placeholder:text-[#636363] py-[6px] px-[12px] border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3] outline-none">
-                </div>
-            
-       <select class="w-[60px] bg-white border border-[#616161] rounded-[9px] py-[8px] px-2 text-[.8125rem] font-[450] 
-                    outline-none focus:ring-1 focus:ring-[#005bd3] cursor-pointer 
-                     group-hover:bg-[#FAFAFA] transition-colors">
-        <option>kg</option>
-        <option>lb</option>
-        <option>oz</option>
-      </select>
-  
-
-  </div>
-
- </div>
-
- <!-- Forth row -->
-
-                <div class="flex flex-col gap-1">
-                    <label class="text-[.8125rem] text-[#303030] font-[450]">Package name</label>
-                    <input type="text" class="w-full text-[.8125rem] font-[450] placeholder:text-[#636363] py-[6px] px-[12px] border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3] outline-none">
-                </div>
-
-    <div  class="flex flex-col mb-15">
-        
-      <div class="flex gap-2 items-center">
-         <input class="w-4 h-4 rounded accent-black" type="checkbox" name="" id="pack-check">    
-         <label  class="text-[#303030] text-[.8125rem] font-[450]" for="pack-check">Use as default package</label>
-         
-        
-       </div>
-       <span class="ml-6 text-[#616161] text-[.75rem] font-[450] ">Used to calculate rates at checkout and pre-selected when buying labels</span>
-</div>
-
-  
-
+    <div class="flex shrink-0 items-center bg-[#F3F3F3] justify-between p-4 border-b border-[#E3E3E3]">
+      <h2 class="text-[.875rem] font-semibold text-[#303030]">Add package</h2>
+      <button type="button" aria-label="Close" class="flex items-center justify-center p-1 text-[#616161] hover:bg-[#F1F1F1] active:bg-[#E3E3E3] rounded-md transition-colors duration-200 cursor-pointer">
+        <span class="cancel-pop-btn w-5 h-5 flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+            <path d="M11.97 13.03a.749.749 0 1 0 1.06-1.06l-3.97-3.97 3.97-3.97a.749.749 0 1 0-1.06-1.06l-3.97 3.97-3.97-3.97a.749.749 0 1 0-1.06 1.06l3.97 3.97-3.97 3.97a.749.749 0 1 0 1.06 1.06l3.97-3.97z"></path>
+          </svg>
+        </span>
+      </button>
     </div>
 
-      <div class="flex justify-end gap-2 p-4 border-t border-[#E3E3E3] ">
-            <button class="cancel-pop-btn rounded-[8px] bg-[#FFFFFF] px-3 py-[6px] flex justify-between text-[#303030] text-[12px] font-[550] cursor-pointer shadow-[inset_0_0_0_.5px_#D3D3D3,inset_0_-.5px_0_.5px_#B5B5B5] active:translate-y-[0.0625rem] inline-flex items-center ">Cancel</button>
-            <button class="rounded-[10px] bg-[#D4D4D4] px-3 py-[6px] flex justify-between  text-[12px] font-[550] text-[#FFFFFF]  cursor-pointer shadow-[inset_0_0_0_.5px_#D3D3D3,inset_0_-.5px_0_.5px_#B5B5B5] active:translate-y-[0.0625rem] inline-flex items-center">Add package</button>
+    <div class="p-4 space-y-5 overflow-y-auto flex-1">
+
+      <div>
+        <label class="block text-[13px] font-semibold text-[#303030] mb-3">Package type</label>
+        <div class="grid grid-cols-3 gap-3">
+          <button class="flex items-center gap-2 p-3 border border-[#E3E3E3] cursor-pointer active-bg-[#F7F7F7] hover:border-[#303030] rounded-lg text-[.8125rem] text-[#303030] font-[450]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="w-4 h-4 fill-current text-[#4A4A4A]">
+              <path fill-rule="evenodd" d="M5 7a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zm.5 3.5v-2h3v2z" />
+              <path fill-rule="evenodd" d="M3.315 2.45a2.25 2.25 0 0 1 1.836-.95h5.796c.753 0 1.455.376 1.872 1.002l1.22 1.828c.3.452.461.983.461 1.526v6.894a1.75 1.75 0 0 1-1.75 1.75h-9.5a1.75 1.75 0 0 1-1.75-1.75v-6.863c0-.57.177-1.125.506-1.59l1.309-1.848Zm1.836.55a.75.75 0 0 0-.612.316l-.839 1.184h3.55v-1.5zm3.599 1.5h3.599l-.778-1.166a.75.75 0 0 0-.624-.334h-2.197zm4.25 1.5h-10v6.75c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25z" />
+            </svg>
+            Box
+          </button>
+          <button class="flex items-center gap-2 p-3 border border-[#E3E3E3] cursor-pointer active-bg-[#F7F7F7] hover:border-[#303030] rounded-lg text-[.8125rem] text-[#303030] font-[450]">
+            <svg class="w-4 h-4 fill-current text-[#4A4A4A]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M3.75 2.5a2.75 2.75 0 0 0-2.75 2.75v5.5a2.75 2.75 0 0 0 2.75 2.75h8.5a2.75 2.75 0 0 0 2.75-2.75v-5.5a2.75 2.75 0 0 0-2.75-2.75zm-1.25 2.75c0-.69.56-1.25 1.25-1.25h8.5c.69 0 1.25.56 1.25 1.25v5.5c0 .69-.56 1.25-1.25 1.25h-8.5c-.69 0-1.25-.56-1.25-1.25zm2.067.32a.75.75 0 0 0-.634 1.36l3.538 1.651c.335.156.723.156 1.058 0l3.538-1.651a.75.75 0 0 0-.634-1.36l-3.433 1.602z"></path>
+            </svg>
+            Envelope
+          </button>
+          <button class="flex items-center gap-2 p-3 border border-[#E3E3E3] cursor-pointer active-bg-[#F7F7F7] hover:border-[#303030] rounded-lg text-[.8125rem] text-[#303030] font-[450]">
+            <svg class="w-4 h-4 fill-current text-[#4A4A4A]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M4 7.5a.75.75 0 0 0 0 1.5h1a.75.75 0 0 0 0-1.5z"></path>
+              <path d="M3.25 10.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1-.75-.75"></path>
+              <path fill-rule="evenodd" d="M3.25 2a2.75 2.75 0 0 0-2.75 2.75v6.5a2.75 2.75 0 0 0 2.75 2.75h9.5a2.75 2.75 0 0 0 2.75-2.75v-6.5a2.75 2.75 0 0 0-2.75-2.75zm7.184 1.5h-7.184c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h7.184l-.5-.273a2.75 2.75 0 0 1-1.434-2.414v-3.626c0-1.006.55-1.932 1.433-2.414zm3.566 7.552v-6.104a1 1 0 0 0-1.479-.878l-1.87 1.02a1.25 1.25 0 0 0-.651 1.097v3.626c0 .457.25.878.651 1.097l1.87 1.02a1 1 0 0 0 1.479-.878"></path>
+            </svg>
+            Soft package
+          </button>
         </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row justify-between gap-6">
+        
+        <div class="flex flex-col sm:flex-row gap-2 md:items-end w-full sm:w-auto">
+          <div class="flex flex-col gap-1 flex-1">
+            <label class="text-[.8125rem] text-[#303030] font-[450]">Length</label>
+            <input type="number" class="w-full  text-[.8125rem] font-[450] py-[6px] px-[12px] border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3] outline-none">
+          </div>
+          <div class="flex flex-col gap-1 flex-1">
+            <label class="text-[.8125rem] text-[#303030] font-[450]">Width</label>
+            <input type="number" class="w-full  text-[.8125rem] font-[450] py-[6px] px-[12px] border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3] outline-none">
+          </div>
+          <div class="flex flex-col gap-1 flex-1">
+            <label class="text-[.8125rem] text-[#303030] font-[450]">Height</label>
+            <input type="number" class="w-full  text-[.8125rem] font-[450] py-[6px] px-[12px] border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3] outline-none">
+          </div>
+          <select class="w-full sm:w-[60px] bg-white border border-[#616161] rounded-[9px] py-[8px] px-2 text-[.8125rem] font-[450] outline-none">
+            <option>cm</option>
+            <option>in</option>
+          </select>
+        </div>
+
+        <div class="flex gap-2 items-end w-full sm:w-auto">
+          <div class="flex flex-col gap-1 flex-1">
+            <label class="text-[.8125rem] text-[#303030] font-[450]">Weight(empty)</label>
+            <input type="number" class="w-full sm:w-[100px] text-[.8125rem] font-[450] py-[6px] px-[12px] border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3] outline-none">
+          </div>
+          <select class=" sm:w-[60px] bg-white border border-[#616161] rounded-[9px] py-[8px] px-2 text-[.8125rem] font-[450] outline-none">
+            <option>kg</option>
+            <option>lb</option>
+          </select>
+        </div>
+        
+      </div>
+
+      <div class="flex flex-col gap-1">
+        <label class="text-[.8125rem] text-[#303030] font-[450]">Package name</label>
+        <input type="text" class="w-full text-[.8125rem] font-[450] py-[6px] px-[12px] border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3] outline-none">
+      </div>
+
+      <div class="flex flex-col mb-10">
+        <div class="flex gap-2 items-center">
+          <input class="w-4 h-4 rounded accent-black" type="checkbox" id="pack-check">
+          <label class="text-[#303030] text-[.8125rem] font-[450]" for="pack-check">Use as default package</label>
+        </div>
+        <span class="ml-6 text-[#616161] text-[.75rem] font-[450]">Used to calculate rates at checkout and pre-selected when buying labels</span>
+      </div>
+    </div>
+
+    <div class="flex shrink-0 justify-end gap-2 p-4 border-t border-[#E3E3E3] bg-white">
+      <button class="cancel-pop-btn rounded-[8px] bg-[#FFFFFF] px-3 py-[6px] text-[#303030] text-[12px] font-[550] shadow-[inset_0_0_0_.5px_#D3D3D3,inset_0_-.5px_0_.5px_#B5B5B5] active:translate-y-[0.0625rem] inline-flex items-center">Cancel</button>
+      <button class="rounded-[10px] bg-[#D4D4D4] px-3 py-[6px] text-[12px] font-[550] text-[#FFFFFF] shadow-[inset_0_0_0_.5px_#D3D3D3,inset_0_-.5px_0_.5px_#B5B5B5] active:translate-y-[0.0625rem] inline-flex items-center">Add package</button>
+    </div>
   </div>
-  
 </div>
 
   </div>

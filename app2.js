@@ -14,6 +14,7 @@ input.onclick = () => {
 
 
 document.querySelectorAll(".main-li").forEach((li) => {
+  
     li.onclick = () => {
         const targetId = li.getAttribute("data-target"); // "AnimalsPetSupplies"
         const subMenu =  document.getElementById(targetId);
@@ -323,6 +324,26 @@ Editbtn.onclick = () =>{
 
 // ***************** Second List Functionality *************************************
 
-document.getElementById("status-btn").onclick = () =>{
-  document.getElementById("status-drpdn").classList.toggle("hidden")
-}
+
+
+const statusBtn = document.getElementById("status-btn");
+const statusText = document.getElementById("status-text");
+const statusDrp = document.getElementById("status-drpdn");
+const statusItems = document.querySelectorAll(".status-item");
+
+statusBtn.onclick = () => {
+  statusDrp.classList.toggle("hidden");
+};
+
+statusItems.forEach((item) => {
+  item.onclick = () => {
+    
+    statusText.textContent = item.dataset.status;
+
+    item.classList.add("bg-[#EBEBEB]");
+    item.querySelector('span').classList.add("font-[550]");
+
+  
+    statusDrp.classList.add("hidden");
+  };
+});

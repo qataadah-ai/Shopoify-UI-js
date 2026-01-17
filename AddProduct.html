@@ -1773,7 +1773,8 @@ Search engine Listing
   <button id="status-btn" class=" rounded-[8px] bg-[#FFFFFF] flex justify-between 
   text-[#303030] text-[.8125rem] font-[550] pl-[12px] pr-[6px] py-[6px] w-full font-sans 
   cursor-pointer shadow-[inset_0_0_0_.5px_#D3D3D3,inset_0_-.5px_0_.5px_#B5B5B5]
-   active:translate-y-[0.0625rem] inline-flex items-center "> Active
+   active:translate-y-[0.0625rem] inline-flex items-center "> 
+   <span id="status-text">Active</span>
     <span class="flex items-center justify-center p-1
      rounded-md text-gray-500 hover:bg-gray-200 cursor-pointer active:bg-gray-200 transition-colors">
       <svg 
@@ -1789,25 +1790,25 @@ Search engine Listing
   </button>
 
   
-<div id="status-drpdn" class="absolute hidden mt-1 right-0 left-0  border border-[#E3E3E3] p-[6px] bg-[#FFFFFF] rounded-[10px] ">
+<div id="status-drpdn" class="absolute mt-1 right-0 left-0  border border-[#E3E3E3] p-[6px] bg-[#FFFFFF] rounded-[10px] ">
 
 
-  <ul class="space-y-[2px]">
+  <ul  class="space-y-[2px]">
 
-    <li   class=" flex flex-col  style-none py-1 px-[6px] hover:bg-[#EBEBEB] rounded-md cursor-pointer" >
-      <span class="  text-[#303030] text-[.8125rem] font-[550]">
+    <li data-status = "Active"  class="status-item flex flex-col  style-none py-1 px-[6px] hover:bg-[#EBEBEB] rounded-md cursor-pointer" >
+      <span  class="  text-[#303030] text-[.8125rem] font-[450]">
         Active
       </span>  
-      <span class="text-[#303030] text-[.75rem] text-[450]">sell via selected sales channels and market</span>
+      <span class="text-[#616161] text-[.75rem] text-[450]">sell via selected sales channels and market</span>
     </li>
-    <li class=" flex flex-col  style-none py-1 px-[6px] hover:bg-[#EBEBEB] rounded-md cursor-pointer" >
-      <span class="  text-[#303030] text-[.8125rem] font-[550]">
+    <li data-status = "Draft" class="status-item flex flex-col style-none py-1 px-[6px] hover:bg-[#EBEBEB] rounded-md cursor-pointer" >
+      <span  class="  text-[#303030] text-[.8125rem] font-[450]">
         Draft
       </span> 
       <span class="text-[#616161] text-[.75rem] text-[450]">Not visible on selected sales channels and market</span>
     </li>
-    <li class=" flex flex-col  style-none py-1 px-[6px] hover:bg-[#EBEBEB] rounded-md cursor-pointer" >
-      <span class="  text-[#303030] text-[.8125rem] font-[550]">
+    <li data-status = "Unlisted" class="status-item flex flex-col  style-none py-1 px-[6px] hover:bg-[#EBEBEB] rounded-md cursor-pointer" >
+      <span  class="  text-[#303030] text-[.8125rem] font-[450]">
         Unlisted
       </span>  
       <span class="text-[#616161] text-[.75rem] text-[450]">Accesible only by direct link</span>
@@ -1815,6 +1816,7 @@ Search engine Listing
   
   </ul>
 </div>
+
 </div>
 
 

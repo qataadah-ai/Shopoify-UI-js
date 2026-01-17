@@ -484,7 +484,7 @@
     class="w-full relative pl-9 pr-3 text-[.8125rem] font-[450] placeholder:text-[#636363] py-[6px] border border-[#616161] rounded-[9px] focus:ring-1 focus:ring-[#005bd3] outline-none"
   >
 
-  <span class="absolute left-3 top-[33.5px] text-[.8125rem] font-[450] text-[#616161]">
+  <span class="absolute left-3 top-[30px] text-[.8125rem] font-[450] text-[#616161]">
     Rs
   </span>
 </div>
@@ -1756,6 +1756,7 @@ Search engine Listing
  <!------------------------------- Second List Column started Here ------------------------------------------------------------->
 
     <div class="md:col-span-4 flex flex-col gap-4">
+      
 <!-- Second List first Card  -->
  <section class="bg-white p-4 rounded-[12px] border border-[#E3E3E3] flex flex-col gap-2 ">
 
@@ -1767,9 +1768,14 @@ Search engine Listing
 </div>
 
 
-<div>
-  <button class="rounded-[8px] bg-[#FFFFFF] flex justify-between text-[#303030] text-[.8125rem] font-[550] pl-[12px] pr-[6px] py-[6px] w-full font-sans cursor-pointer shadow-[inset_0_0_0_.5px_#D3D3D3,inset_0_-.5px_0_.5px_#B5B5B5] active:translate-y-[0.0625rem] inline-flex items-center "> Active
-    <span class="flex items-center justify-center p-1 rounded-md text-gray-500 hover:bg-gray-200 cursor-pointer active:bg-gray-200 transition-colors">
+<div  class="relative">
+
+  <button id="status-btn" class=" rounded-[8px] bg-[#FFFFFF] flex justify-between 
+  text-[#303030] text-[.8125rem] font-[550] pl-[12px] pr-[6px] py-[6px] w-full font-sans 
+  cursor-pointer shadow-[inset_0_0_0_.5px_#D3D3D3,inset_0_-.5px_0_.5px_#B5B5B5]
+   active:translate-y-[0.0625rem] inline-flex items-center "> Active
+    <span class="flex items-center justify-center p-1
+     rounded-md text-gray-500 hover:bg-gray-200 cursor-pointer active:bg-gray-200 transition-colors">
       <svg 
           xmlns="http://www.w3.org/2000/svg" 
           viewBox="0 0 16 16" 
@@ -1781,6 +1787,34 @@ Search engine Listing
         </svg>
     </span>
   </button>
+
+  
+<div id="status-drpdn" class="absolute hidden mt-1 right-0 left-0  border border-[#E3E3E3] p-[6px] bg-[#FFFFFF] rounded-[10px] ">
+
+
+  <ul class="space-y-[2px]">
+
+    <li   class=" flex flex-col  style-none py-1 px-[6px] hover:bg-[#EBEBEB] rounded-md cursor-pointer" >
+      <span class="  text-[#303030] text-[.8125rem] font-[550]">
+        Active
+      </span>  
+      <span class="text-[#303030] text-[.75rem] text-[450]">sell via selected sales channels and market</span>
+    </li>
+    <li class=" flex flex-col  style-none py-1 px-[6px] hover:bg-[#EBEBEB] rounded-md cursor-pointer" >
+      <span class="  text-[#303030] text-[.8125rem] font-[550]">
+        Draft
+      </span> 
+      <span class="text-[#616161] text-[.75rem] text-[450]">Not visible on selected sales channels and market</span>
+    </li>
+    <li class=" flex flex-col  style-none py-1 px-[6px] hover:bg-[#EBEBEB] rounded-md cursor-pointer" >
+      <span class="  text-[#303030] text-[.8125rem] font-[550]">
+        Unlisted
+      </span>  
+      <span class="text-[#616161] text-[.75rem] text-[450]">Accesible only by direct link</span>
+    </li>
+  
+  </ul>
+</div>
 </div>
 
 

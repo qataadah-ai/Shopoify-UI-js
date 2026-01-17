@@ -1,9 +1,13 @@
+
+
+// ***************** First List Functionality *************************************
+
 // Get the main elements
 const input = document.getElementById("category");
 const dropdown = document.getElementById("category-dropdown");
 const mainList = document.getElementById("main-list");
 
-// 1. Toggle the entire dropdown when clicking input
+// 1. Toggling  entie dropdown when clicking input
 input.onclick = () => {
   dropdown.classList.toggle("hidden");
 };
@@ -317,3 +321,8 @@ Editbtn.onclick = () =>{
 }
 
 
+// ***************** Second List Functionality *************************************
+
+document.getElementById("status-btn").onclick = () =>{
+  document.getElementById("status-drpdn").classList.toggle("hidden")
+}

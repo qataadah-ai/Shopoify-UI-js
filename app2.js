@@ -340,6 +340,13 @@ statusItems.forEach((item) => {
     
     statusText.textContent = item.dataset.status;
 
+    statusItems.forEach(el => {
+      el.classList.remove("bg-[#EBEBEB]", "font-[550]");
+     
+      el.querySelector('span').classList.remove("font-[550]");
+    });
+
+
     item.classList.add("bg-[#EBEBEB]");
     item.querySelector('span').classList.add("font-[550]");
 
